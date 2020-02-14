@@ -1,8 +1,6 @@
-/**
- * 
- */
+
 /**
  * @author David Cosby
  *
  */
-package scenes;
+package vectors;

@@ -1,5 +1,9 @@
 package scenes;
 
+/**
+ * @author David Cosby
+ *
+ */
 public class PhysicsSettings {
 	private double simulationSpeedScale;
 	private int refreshRateInHertz;
@@ -9,6 +13,7 @@ public class PhysicsSettings {
 		refreshRateInHertz = 60;
 	}
 	
+
 	public double getSimulationSpeedScale() {
 		return simulationSpeedScale;
 	}

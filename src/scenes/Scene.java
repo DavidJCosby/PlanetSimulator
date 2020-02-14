@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Scene {
 	private ArrayList<Planet> planets = new ArrayList<Planet>();
-	private SceneSettings settings = new SceneSettings();
+	private Settings settings = new Settings();
 	
 	
 	public Scene() {
@@ -18,7 +18,6 @@ public class Scene {
 	}
 
 	/**
-	 * Returns an ArrayList of Planets in the Scene
 	 * @return planets - ArrayList of Planets in the Scene
 	*/
 	public ArrayList<Planet> getPlanets() { // TODO: change from ArrayList to a new Planets class
@@ -26,10 +25,9 @@ public class Scene {
 	}
 	
 	/**
-	 * Returns the Scene's SceneSetting object
 	 * @return settings - SceneSetting object
 	*/
-	public SceneSettings getSettings() {
+	public Settings getSettings() {
 		return settings;
 	}
 	

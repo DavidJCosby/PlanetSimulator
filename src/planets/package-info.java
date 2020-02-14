@@ -2,7 +2,7 @@
  * 
  */
 /**
- * @author student
+ * @author David Cosby
  *
  */
 package planets;
