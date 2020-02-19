@@ -17,7 +17,7 @@ public class NewtonianObject {
 	 */
 	protected Vector velocity = new Vector();
 	/**
-	 * kilograms
+	 * (kilograms)
 	 */
 	protected double mass = 7.348e22;
 	
@@ -37,7 +37,7 @@ public class NewtonianObject {
 	
 	
 	/**
-	 * @return position kilometers
+	 * @return position in kilometers
 	*/
 	public Vector getPosition() {
 		return position;
@@ -48,7 +48,7 @@ public class NewtonianObject {
 	}
 	
 	/**
-	 * @return velocity kilometers/second
+	 * @return velocity in kilometers/second
 	*/
 	public Vector getVelocity() {
 		return velocity;

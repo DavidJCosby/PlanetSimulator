@@ -117,7 +117,7 @@ public class Vector {
 	}
 	
 	/**
-	 * @param multiplier double x and y is divided by
+	 * @param divisor double x and y is divided by
 	 * @return new Vector: (x/divisor, y/divisor)
 	 */
 	public Vector div(double divisor) {

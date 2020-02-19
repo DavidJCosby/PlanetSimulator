@@ -3,13 +3,13 @@ package planets;
 import vectors.Vector;
 
 /**
+ *  All Planets have a radius, and therefore density and volume.
  * @author David Cosby
- *
  */
 
 public class Planet extends NewtonianObject {
 	/**
-	 * g/cm^3
+	 * (g/cm^3)
 	*/
 	private double density = 3.34;
 	
