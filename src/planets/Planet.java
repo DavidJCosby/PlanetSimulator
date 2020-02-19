@@ -3,7 +3,7 @@ package planets;
 import vectors.Vector;
 
 /**
- *  All Planets have a radius, and therefore density and volume.
+ *  All Planets have a density, and therefore, radius and volume.
  * @author David Cosby
  */
 
@@ -38,6 +38,17 @@ public class Planet extends NewtonianObject {
 		density = newDensity;
 	}
 
+	
+	/**
+	 * @return volume in km^3
+	*/
+	public double getVolume() {
+		return mass/density;
+	}
+	
+	public double getRadius() {
+		return Math.pow((3.0 * getVolume()) / (4.0 * Math.PI), 1.0/3.0) ;
+	}
 	
 	
 	

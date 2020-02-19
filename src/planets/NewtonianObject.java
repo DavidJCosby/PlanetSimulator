@@ -57,6 +57,10 @@ public class NewtonianObject {
 	public void setVelocity(Vector newVelocity) {
 		velocity.set(newVelocity.getX(), newVelocity.getY());
 	}
+	
+	public void addVelocity(Vector deltaVelocity) {
+		velocity = velocity.add(deltaVelocity);
+	}
 
 	/**
 	 * @return mass in kilograms
@@ -67,6 +71,21 @@ public class NewtonianObject {
 
 	public void setMass(double newMass) {
 		mass = newMass;
+	}
+	
+	/**
+	 * @return momentum in kilograms * kilometers / seconds
+	*/
+	public Vector getMomentum() {
+		return velocity.mul(mass);
+	}
+	
+	/**
+	 * @param MomentumVector Amount of momentum to be applied to the NewtonianObject
+	 */
+	public void applyMomentum(Vector MomentumVector) {
+		Vector velocityToAdd = MomentumVector.div(mass);
+		velocity = velocity.add(velocityToAdd);
 	}
 	
 }

@@ -9,8 +9,8 @@ import vectors.Vector;
 class PlanetTest {
 
 	private void compareVectors(Vector a, Vector b) {
-		assertEquals(a.getX(), b.getX());
-		assertEquals(a.getY(), b.getY());
+		assertEquals(a.getX(), b.getX(), 0.000001);
+		assertEquals(a.getY(), b.getY(), 0.000001);
 	}
 	
 	@Test
@@ -50,5 +50,18 @@ class PlanetTest {
 		Planet p = new Planet();
 		p.setVelocity(new Vector(0, -2));
 		compareVectors(new Vector(0, -2), p.getVelocity());
+		
+		p.addVelocity(new Vector(3, 3));
+		compareVectors(new Vector(3, 1), p.getVelocity());
+	}
+	
+	@Test
+	void testMomentum() {
+		Planet p = new Planet(new Vector(), 60, 2);
+		p.setVelocity(new Vector(2, -3));
+		compareVectors(new Vector( 120, -180), p.getMomentum());
+		
+		p.applyMomentum(new Vector(-84, 22));
+		compareVectors(new Vector(36, -158), p.getMomentum());
 	}
 }
