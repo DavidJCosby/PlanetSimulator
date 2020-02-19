@@ -20,6 +20,10 @@ public class Planet {
 	 */
 	private Vector position;
 	/**
+	 * (kilometers/second, kilometers/second)
+	 */
+	private Vector velocity;
+	/**
 	 * kilograms
 	 */
 	private double mass;
@@ -32,18 +36,21 @@ public class Planet {
 		position = new Vector(0, 0);
 		mass = 7.348e22; // mass and density of the moon, for testing
 		density = 3.34;
+		velocity = new Vector(0, 0);
 	}
 	
 	public Planet(Vector position) {
-		this.position = position;
+		this.position = new Vector(position.getX(), position.getY());
 		mass = 7.348e22;
 		density = 3.34;
+		velocity = new Vector(0, 0);
 	}
 	
 	public Planet(Vector position, double mass, double density) {
-		this.position = position;
+		this.position = new Vector(position.getX(), position.getY());
 		this.mass = mass;
 		this.density = density;
+		velocity = new Vector(0, 0);
 	}
 
 	/**
@@ -54,8 +61,20 @@ public class Planet {
 	}
 
 	public void setPosition(Vector newPosition) {
-		position = newPosition;
+		position.set(newPosition.getX(), newPosition.getY());
 	}
+	
+	/**
+	 * @return velocity kilometers/second
+	*/
+	public Vector getVelocity() {
+		return velocity;
+	}
+
+	public void setVelocity(Vector newVelocity) {
+		velocity.set(newVelocity.getX(), newVelocity.getY());
+	}
+	
 
 	/**
 	 * @return mass in kilograms

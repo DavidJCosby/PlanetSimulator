@@ -104,24 +104,24 @@ public class Vector {
 	 * @return new Vector: (x/secondVector.x, y/secondVector.y)
 	 */
 	public Vector div(Vector secondVector) {
-		return new Vector(x * secondVector.getX(), y * secondVector.getY());
+		return new Vector(x / secondVector.getX(), y / secondVector.getY());
 	}
 	
 	/**
-	 * @param xMultiplier double x is multiplied by
-	 * @param yMultiplier double y is multiplied by
-	 * @return new Vector: (x/xMultiplier, y/yMultiplier)
+	 * @param xDivisor double x is divided by
+	 * @param yDivisor double y is divided by
+	 * @return new Vector: (x/xDivisor, y/yDivisor)
 	 */
-	public Vector div(double xMultiplier, double yMultiplier) {
-		return new Vector(x / xMultiplier, y / yMultiplier);
+	public Vector div(double xDivisor, double yDivisor) {
+		return new Vector(x / xDivisor, y / yDivisor);
 	}
 	
 	/**
-	 * @param multiplier double x and y is multiplied by
-	 * @return new Vector: (x/multiplier, y/multiplier)
+	 * @param multiplier double x and y is divided by
+	 * @return new Vector: (x/divisor, y/divisor)
 	 */
-	public Vector div(double multiplier) {
-		return new Vector(x / multiplier, y / multiplier);
+	public Vector div(double divisor) {
+		return new Vector(x / divisor, y / divisor);
 	}	
 	
 	
@@ -137,12 +137,12 @@ public class Vector {
 	 * @return new Vector where Vector.magnitude() == 0
 	 */
 	public Vector unit() {
-		double magnitude = magnitude();
+		double mag = magnitude();
 		
-		if (magnitude == 0) 
+		if (mag == 0) 
 			return new Vector(0, 0);
 		else
-			return new Vector(x / magnitude(), y / magnitude());
+			return new Vector(x / mag, y / mag);
 	}
 
 	/**
