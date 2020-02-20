@@ -1,5 +1,6 @@
 package planets;
 
+import unitConversion.Rates;
 import vectors.Vector;
 
 /**
@@ -43,7 +44,7 @@ public class Planet extends NewtonianObject {
 	 * @return volume in km^3
 	*/
 	public double getVolume() {
-		return mass/density;
+		return mass / (density * Rates.G_OVER_CM3_TO_KG_OVER_KM3);
 	}
 	
 	public double getRadius() {
