@@ -35,22 +35,28 @@ public class Planet extends NewtonianObject {
 		return density;
 	}
 
+	/**
+	 * @param newDensity density is set to
+	 */
 	public void setDensity(double newDensity) {
 		density = newDensity;
 	}
 
 	
 	/**
+	 * v = m/d
 	 * @return volume in km^3
 	*/
 	public double getVolume() {
 		return mass / (density * Rates.G_OVER_CM3_TO_KG_OVER_KM3);
 	}
 	
+	/**
+	 * r = cbrt(3v/4pi)
+	 * @return radius in km
+	*/
 	public double getRadius() {
-		return Math.pow((3.0 * getVolume()) / (4.0 * Math.PI), 1.0/3.0) ;
+		return Math.cbrt((3.0 * getVolume()) / (4.0 * Math.PI)) ;
 	}
-	
-	
 	
 }

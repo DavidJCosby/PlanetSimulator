@@ -64,4 +64,16 @@ class PlanetTest {
 		p.applyMomentum(new Vector(-84, 22));
 		compareVectors(new Vector(36, -158), p.getMomentum());
 	}
+	
+	@Test
+	void testRadius() {
+		Planet p = new Planet(new Vector(), 7.34767309E22, 3.34); // moon parameters
+		assertEquals(1738.22, p.getRadius(), 0.01);
+	}
+	
+	@Test
+	void testVolume() {
+		Planet p = new Planet(new Vector(), 7.34767309E22, 3.34); // moon parameters
+		assertEquals(2.1999E10, p.getVolume(), 3e4);
+	}
 }
