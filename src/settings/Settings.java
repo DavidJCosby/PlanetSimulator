@@ -1,4 +1,4 @@
-package scenes;
+package settings;
 
 /**
  * @author David Cosby
