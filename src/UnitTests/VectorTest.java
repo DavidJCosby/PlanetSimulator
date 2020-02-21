@@ -1,8 +1,10 @@
-package vector;
+package UnitTests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+
+import vector.Vector;
 
 class VectorTest {
 

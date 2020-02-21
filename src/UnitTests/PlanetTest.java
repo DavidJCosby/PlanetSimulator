@@ -1,9 +1,10 @@
-package physicsObject;
+package UnitTests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import physicsObject.Planet;
 import vector.Vector;
 
 class PlanetTest {
