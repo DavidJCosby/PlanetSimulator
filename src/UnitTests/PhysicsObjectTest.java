@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import physicsObject.Planet;
 import vector.Vector;
 
-class PlanetTest {
+class PhysicsObjectTest {
 
 	private void compareVectors(Vector a, Vector b) {
 		assertEquals(a.getX(), b.getX(), 0.000001);
