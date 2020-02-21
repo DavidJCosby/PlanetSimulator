@@ -1,7 +1,7 @@
-package planets;
+package physicsObject;
 
 import unitConversion.Rates;
-import vectors.Vector;
+import vector.Vector;
 
 /**
  *  All Planets have a density, and therefore, radius and volume.

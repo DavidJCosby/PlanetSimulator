@@ -5,4 +5,4 @@
  * @author David Cosby
  *
  */
-package planets;
+package scene;

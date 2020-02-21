@@ -1,6 +1,6 @@
-package scenes;
+package scene;
 
-import planets.PlanetContainer;
+import physicsObject.PlanetContainer;
 import settings.Settings;
 
 

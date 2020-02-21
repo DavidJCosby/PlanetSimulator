@@ -1,6 +1,6 @@
-import scenes.Scene;
-import planets.Planet;
-import vectors.Vector;
+import physicsObject.Planet;
+import scene.Scene;
+import vector.Vector;
 
 
 public class test {

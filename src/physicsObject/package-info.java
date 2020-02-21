@@ -1,6 +1,8 @@
-
+/**
+ * 
+ */
 /**
  * @author David Cosby
  *
  */
-package vectors;
+package physicsObject;

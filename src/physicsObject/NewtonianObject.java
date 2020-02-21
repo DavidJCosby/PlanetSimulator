@@ -1,6 +1,6 @@
-package planets;
+package physicsObject;
 
-import vectors.Vector;
+import vector.Vector;
 
 /**
  * All Newtonian objects have position, velocity, and mass.

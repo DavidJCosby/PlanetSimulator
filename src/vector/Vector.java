@@ -1,4 +1,4 @@
-package vectors;
+package vector;
 
 /**
  * @author David Cosby
