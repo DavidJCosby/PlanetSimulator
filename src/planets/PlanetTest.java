@@ -76,4 +76,18 @@ class PlanetTest {
 		Planet p = new Planet(new Vector(), 7.34767309E22, 3.34); // moon parameters
 		assertEquals(2.1999E10, p.getVolume(), 3e4);
 	}
+	
+	@Test
+	void testIdentification() {
+		int expected = Planet.getPlanetsEverCreated() + 1;
+		Planet p = new Planet();
+		assertEquals(expected, p.getId());
+	}
+	
+	@Test
+	void testName() {
+		Planet p = new Planet();
+		p.setName("NATHAN");
+		assertEquals("NATHAN", p.getName());
+	}
 }

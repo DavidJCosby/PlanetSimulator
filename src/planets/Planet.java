@@ -14,19 +14,59 @@ public class Planet extends NewtonianObject {
 	*/
 	private double density = 3.34;
 	
+	private int id;
+	private String name;
+	private static int planetsEverCreated;
+	
 	public Planet() {
 		super();
+		establishIdentity();
 	}
 	
 	public Planet(Vector position) {
 		super(position);
+		establishIdentity();
 	}
 	
 	public Planet(Vector position, double mass, double density) {
 		super(position, mass);
 		this.density = density;
+		establishIdentity();
 	}
-
+	
+	private void establishIdentity() {
+		id = planetsEverCreated + 1;
+		name = "Planet";
+		planetsEverCreated++;
+	}
+	
+	/**
+	 * @return unique identifier for the planet
+	 */
+	public int getId() { 
+		return id;
+	}
+	
+	/**
+	 * @return name planet's current name
+	 */
+	public String getName() {
+		return name;
+	}
+	
+	/**
+	 * @param newName planet's new name
+	 */
+	public void setName(String newName) {
+		name = newName;
+	}
+	
+	/**
+	 * @return planetsEverCreated number of planets the system has created
+	 */
+	public static int getPlanetsEverCreated() {
+		return planetsEverCreated;
+	}
 	
 	/**
 	 * @return density in g/cm^3
