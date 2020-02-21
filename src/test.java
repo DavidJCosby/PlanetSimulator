@@ -8,6 +8,9 @@ public class test {
 	
 	public static void main(String[] args) {
 		Planet p = new Planet();
-		System.out.println(p.getRadius());
+		Planet p2 = new Planet();
+		Planet p3 = new Planet();
+
+		System.out.println(p2.getName());
 	}
 }
