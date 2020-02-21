@@ -1,4 +1,4 @@
-package camera;
+package render;
 
 import vector.Vector;
 
@@ -40,14 +40,14 @@ public class Camera {
 	}
 	
 	/**
-	 * @return camera offset distance (kilometers, kilometers)
+	 * @return camera offset displacement (kilometers, kilometers)
 	 */
 	public Vector getOffset() { 
 		return offset;
 	}
 	
 	/**
-	 * @param newOffset new camera offset distance (kilometers, kilometers)
+	 * @param newOffset new camera offset displacement (kilometers, kilometers)
 	 */
 	public void setOffset(Vector newOffset) { 
 		offset.set(newOffset.getX(), newOffset.getY());
@@ -67,5 +67,14 @@ public class Camera {
 		pixelsPerKilometer = newPixelsPerKilometer;
 	}
 	
+	/**
+	 * @param location (kilometers, kilometers) vector that we want to map to screen space
+	 * @return delta - location's coordinates on the screen (pixels, pixels), measured as distance from the center of the screen
+	 */
+	public Vector getScreenDisplacementFromCenter(Vector location) {
+		Vector delta = location.sub(position.add(offset));
+		delta = delta.mul(pixelsPerKilometer);
+		return delta;
+	}
 	
 }

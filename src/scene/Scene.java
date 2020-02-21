@@ -1,6 +1,7 @@
 package scene;
 
 import physicsObject.PlanetContainer;
+import render.Camera;
 import settings.Settings;
 
 
@@ -11,6 +12,7 @@ import settings.Settings;
 public class Scene {
 	private PlanetContainer planets = new PlanetContainer();
 	private Settings settings = new Settings();
+	private Camera camera = new Camera();
 	
 	public Scene() {
 		
@@ -30,5 +32,11 @@ public class Scene {
 		return settings;
 	}
 	
-	
+	/**
+	 * @return camera - Scene's current camera object
+	 */
+	public Camera getCamera() {
+		return camera;
+	}
+
 }
