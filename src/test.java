@@ -1,14 +1,17 @@
 import physicsObject.Planet;
-import render.Camera;
-import scene.Scene;
+import render.*;
+import scene.SimulationScene;
 import vector.Vector;
+import bridge.Bridge;
 
 public class test {
 
 	
 	public static void main(String[] args) {
-		Camera cam = new Camera();
-		Vector loc = new Vector(0, 100);
-		System.out.println(cam.getScreenDisplacementFromCenter(loc));
+		SimulationScene scene = new SimulationScene();
+		Bridge.setScene(scene);
+		Renderer renderer = new Renderer();
+		Bridge.setRenderer(renderer);
+		System.out.println("ran");
 	}
 }
