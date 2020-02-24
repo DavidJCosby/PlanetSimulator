@@ -1,4 +1,5 @@
 package physicsObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -10,11 +11,11 @@ public class PlanetContainer {
 	/**
 	 * List of Planets in order of registration. Use, paired with getNumberOfPlanets(), when you need to loop through a list.
 	 */
-	ArrayList<Planet> planets = new ArrayList<Planet>();
+	private ArrayList<Planet> planets = new ArrayList<Planet>();
 	/**
 	 * Map of Planet Id's (key) to Planets (value). Use when you need to retrieve a specific planet. 
 	 */
-	HashMap<Integer, Planet> planetsById = new HashMap<Integer, Planet>();
+	private HashMap<Integer, Planet> planetsByID = new HashMap<Integer, Planet>();
 	
 	
 	public PlanetContainer() {
@@ -26,7 +27,7 @@ public class PlanetContainer {
 	 */
 	public void addPlanet(Planet planet) {
 		planets.add(planet);
-		planetsById.put(planet.getId(), planet);
+		planetsByID.put(planet.getID(), planet);
 	}
 	
 	/**
@@ -41,8 +42,8 @@ public class PlanetContainer {
 	 * @param id identifier of the requested planet
 	 * @return planet of requested id
 	 */
-	public Planet getPlanetById(int id) {
-		return planetsById.get(id);
+	public Planet getPlanetById(int ID) {
+		return planetsByID.get(ID);
 	}
 	
 	

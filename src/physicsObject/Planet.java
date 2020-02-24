@@ -14,7 +14,7 @@ public class Planet extends NewtonianObject {
 	*/
 	private double density = 3.34;
 	
-	private int id;
+	private int ID;
 	private String name;
 	private static int planetsEverCreated;
 	
@@ -35,7 +35,7 @@ public class Planet extends NewtonianObject {
 	}
 	
 	private void establishIdentity() {
-		id = planetsEverCreated + 1;
+		ID = planetsEverCreated + 1;
 		name = "Planet";
 		planetsEverCreated++;
 	}
@@ -43,8 +43,8 @@ public class Planet extends NewtonianObject {
 	/**
 	 * @return unique identifier for the planet
 	 */
-	public int getId() { 
-		return id;
+	public int getID() { 
+		return ID;
 	}
 	
 	/**
