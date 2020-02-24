@@ -8,13 +8,12 @@ import settings.Settings;
 /**
  * @author David Cosby
 */
-
-public class Scene {
+public class SimulationScene {
 	private PlanetContainer planets = new PlanetContainer();
 	private Settings settings = new Settings();
 	private Camera camera = new Camera();
 	
-	public Scene() {
+	public SimulationScene() {
 		
 	}
 
