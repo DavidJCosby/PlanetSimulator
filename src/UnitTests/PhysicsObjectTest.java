@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import physicsObject.Planet;
+import physicsObject.*;
 import vector.Vector;
 
 class PhysicsObjectTest {
@@ -82,7 +82,7 @@ class PhysicsObjectTest {
 	void testIdentification() {
 		int expected = Planet.getPlanetsEverCreated() + 1;
 		Planet p = new Planet();
-		assertEquals(expected, p.getId());
+		assertEquals(expected, p.getID());
 	}
 	
 	@Test
@@ -90,5 +90,15 @@ class PhysicsObjectTest {
 		Planet p = new Planet();
 		p.setName("NATHAN");
 		assertEquals("NATHAN", p.getName());
+	}
+	
+	@Test
+	void testPlanetContainer() {
+		PlanetContainer c = new PlanetContainer();
+		Planet p = new Planet();
+		c.addPlanet(p);
+		assertSame(c.getPlanetByIndex(0), c.getPlanetById(p.getID()));
+		assertEquals(1, c.getNumberOfPlanets());
+		
 	}
 }
