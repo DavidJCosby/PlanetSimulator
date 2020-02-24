@@ -77,4 +77,12 @@ public class Camera {
 		return delta;
 	}
 	
+	/**
+	 * @param kilometerLength (kilometers)
+	 * @return pixelLength - kilometerLength cast to screen space using the zoom factor
+	 */
+	public Double getScreenPixelLength(double kilometerLength) {
+		return kilometerLength * pixelsPerKilometer;
+	}
+	
 }
