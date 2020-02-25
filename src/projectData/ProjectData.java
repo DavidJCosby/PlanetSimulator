@@ -1,19 +1,18 @@
-package scene;
+package projectData;
 
 import physicsObject.PlanetContainer;
 import render.Camera;
-import settings.Settings;
 
 
 /**
  * @author David Cosby
 */
-public class SimulationScene {
+public class ProjectData {
 	private PlanetContainer planets = new PlanetContainer();
 	private Settings settings = new Settings();
 	private Camera camera = new Camera();
 	
-	public SimulationScene() {
+	public ProjectData() {
 		
 	}
 

@@ -1,4 +1,4 @@
-package settings;
+package projectData;
 
 /**
  * settings specific to the physics engine

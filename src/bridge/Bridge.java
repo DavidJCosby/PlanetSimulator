@@ -1,6 +1,6 @@
 package bridge;
 
-import scene.SimulationScene;
+import projectData.ProjectData;
 import render.Renderer;
 
 /**
@@ -8,17 +8,17 @@ import render.Renderer;
  *
  */
 public class Bridge {
-	private static SimulationScene scene;
+	private static ProjectData scene;
 	private static Renderer renderer;
 	//public static Scheduler scheduler;
 	//public static UI ui;
 	
 	
-	public static SimulationScene getScene() {
+	public static ProjectData getScene() {
 		return scene;
 	}
 	
-	public static void setScene(SimulationScene newScene) {
+	public static void setScene(ProjectData newScene) {
 		scene = newScene;
 	}
 	

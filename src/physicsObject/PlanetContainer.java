@@ -39,7 +39,7 @@ public class PlanetContainer {
 	}
 	
 	/**
-	 * @param id identifier of the requested planet
+	 * @param ID identifier of the requested planet
 	 * @return planet of requested id
 	 */
 	public Planet getPlanetById(int ID) {
