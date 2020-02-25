@@ -37,7 +37,7 @@ public class RenderObject extends Circle {
 	}
 	
 	private void createSelf() {
-		this.setStroke(Color.BLACK);
+		this.setStroke(Color.web("#859900")); // TODO: replace with CSS
 		this.setFill(Color.web("#859900"));
 	}
 	

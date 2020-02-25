@@ -1,17 +1,35 @@
 import physicsObject.Planet;
 import projectData.ProjectData;
 import render.*;
+import render.renderObjects.*;
 import vector.Vector;
 import bridge.Bridge;
+import window.*;
 
-public class test {
+import javafx.application.Application;
+import javafx.stage.Stage;
 
+public class test extends Application {
 	
-	public static void main(String[] args) {
-		ProjectData scene = new ProjectData();
-		Bridge.setScene(scene);
+	private void setupBridge() {
+		ProjectData data = new ProjectData();
+		Bridge.setProjectData(data);
+		
 		Renderer renderer = new Renderer();
 		Bridge.setRenderer(renderer);
-		System.out.println("ran");
+
+		WindowManager windowManager = new WindowManager();
+		Bridge.setWindowManager(windowManager);
+		
+	}
+	
+	@Override
+	public void start(Stage primaryStage) {
+		setupBridge();
+		Bridge.getWindowManager().showProjectWindow();
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
 	}
 }
