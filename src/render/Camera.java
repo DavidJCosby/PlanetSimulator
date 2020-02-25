@@ -22,7 +22,7 @@ public class Camera {
 	}
 	
 	public Camera(Vector position) {
-		
+		setPosition(position);
 	}
 	
 	/**
@@ -81,7 +81,7 @@ public class Camera {
 	 * @param kilometerLength (kilometers)
 	 * @return pixelLength - kilometerLength cast to screen space using the zoom factor
 	 */
-	public Double getScreenPixelLength(double kilometerLength) {
+	public double getScreenPixelLength(double kilometerLength) {
 		return kilometerLength * pixelsPerKilometer;
 	}
 	
