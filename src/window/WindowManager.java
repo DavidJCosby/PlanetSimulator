@@ -4,7 +4,7 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 
 /**
- * In charge of opening and closing windows. Extends Application.
+ * In charge of opening and closing windows.
  * @author David Cosby
  */
 public class WindowManager {
