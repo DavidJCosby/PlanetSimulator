@@ -5,6 +5,7 @@ import render.Camera;
 
 
 /**
+ * Contains only data relating to the project that needs to be saved and loaded.
  * @author David Cosby
 */
 public class ProjectData {

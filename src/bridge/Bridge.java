@@ -5,8 +5,8 @@ import render.Renderer;
 import window.WindowManager;
 
 /**
+ * Static reference point for high level components.
  * @author David Cosby
- *
  */
 public class Bridge {
 	private static ProjectData scene;
@@ -39,5 +39,4 @@ public class Bridge {
 	public static void setWindowManager(WindowManager newWindowManager) {
 		windowManager = newWindowManager;
 	}
-	
 }

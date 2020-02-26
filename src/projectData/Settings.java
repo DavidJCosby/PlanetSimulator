@@ -1,8 +1,8 @@
 package projectData;
 
 /**
+ * Contains all sub-categories for settings.
  * @author David Cosby
- *
  */
 public class Settings {
 	private PhysicsSettings physics = new PhysicsSettings();

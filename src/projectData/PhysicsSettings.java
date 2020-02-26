@@ -1,7 +1,7 @@
 package projectData;
 
 /**
- * settings specific to the physics engine
+ * Settings specific to the Physics Engine.
  * @author David Cosby
  */
 public class PhysicsSettings {

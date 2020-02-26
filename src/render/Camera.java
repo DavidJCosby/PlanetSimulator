@@ -2,6 +2,10 @@ package render;
 
 import vector.Vector;
 
+/**
+ * In charge of transferring coordinates from metric space to screen space.
+ * @author David Cosby
+ */
 public class Camera {
 	/**
 	 * Coordinates at which the center of the camera will be aimed. (kilometers, kilometers)
@@ -25,44 +29,26 @@ public class Camera {
 		setPosition(position);
 	}
 	
-	/**
-	 * @return camera position (kilometers, kilometers)
-	 */
 	public Vector getPosition() {
 		return position;
 	}
 	
-	/**
-	 * @param newPosition new camera position (kilometers, kilometers)
-	 */
 	public void setPosition(Vector newPosition) {
 		position.set(newPosition.getX(), newPosition.getY());
 	}
 	
-	/**
-	 * @return camera offset displacement (kilometers, kilometers)
-	 */
 	public Vector getOffset() { 
 		return offset;
 	}
 	
-	/**
-	 * @param newOffset new camera offset displacement (kilometers, kilometers)
-	 */
 	public void setOffset(Vector newOffset) { 
 		offset.set(newOffset.getX(), newOffset.getY());
 	}
 	
-	/**
-	 * @return zoom factor (pixels/kilometer)
-	 */
 	public double getZoom() {
 		return pixelsPerKilometer;
 	}
 	
-	/**
-	 * @param newPixelsPerKilometer new zoom factor (pixels/kilometer)
-	 */
 	public void setZoom(double newPixelsPerKilometer) { 
 		pixelsPerKilometer = newPixelsPerKilometer;
 	}

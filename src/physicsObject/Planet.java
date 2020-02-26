@@ -40,44 +40,27 @@ public class Planet extends NewtonianObject {
 		planetsEverCreated++;
 	}
 	
-	/**
-	 * @return unique identifier for the planet
-	 */
 	public int getID() { 
 		return ID;
 	}
 	
-	/**
-	 * @return name planet's current name
-	 */
 	public String getName() {
 		return name;
 	}
 	
-	/**
-	 * @param newName planet's new name
-	 */
 	public void setName(String newName) {
 		name = newName;
 	}
 	
-	/**
-	 * @return planetsEverCreated number of planets the system has created
-	 */
 	public static int getPlanetsEverCreated() {
 		return planetsEverCreated;
 	}
 	
-	/**
-	 * @return density in g/cm^3
-	 */
 	public double getDensity() {
 		return density;
 	}
 
-	/**
-	 * @param newDensity density is set to
-	 */
+
 	public void setDensity(double newDensity) {
 		density = newDensity;
 	}
@@ -85,7 +68,7 @@ public class Planet extends NewtonianObject {
 	
 	/**
 	 * v = m/d
-	 * @return volume in km^3
+	 * @return volume
 	*/
 	public double getVolume() {
 		return mass / (density * Rates.G_OVER_CM3_TO_KG_OVER_KM3);
@@ -93,7 +76,7 @@ public class Planet extends NewtonianObject {
 	
 	/**
 	 * r = cbrt(3v/4pi)
-	 * @return radius in km
+	 * @return radius 
 	*/
 	public double getRadius() {
 		return Math.cbrt((3.0 * getVolume()) / (4.0 * Math.PI)) ;

@@ -6,18 +6,18 @@ import javafx.scene.shape.Circle;
 import javafx.scene.paint.*;
 
 /**
+ * Circle to be rendered that represents a planet.
  * @author David Cosby
  */
-public class RenderObject extends Circle {
+public class PlanetDisplay extends Circle {
 	private Vector position = new Vector();
 	private int ID;
 	
 	
-	public RenderObject(int ID) {
+	public PlanetDisplay(int ID) {
 		this.ID = ID;
 		createSelf();
 	}
-	
 	
 	public void setPosition(Vector newPosition) {
 		position.set(newPosition.getX(), newPosition.getY());
