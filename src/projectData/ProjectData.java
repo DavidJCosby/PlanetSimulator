@@ -17,23 +17,15 @@ public class ProjectData {
 		
 	}
 
-	/**
-	 * @return planets - Container of Planets in the Scene
-	*/
+
 	public PlanetContainer getPlanets() { 
 		return planets;
 	}
 	
-	/**
-	 * @return settings - SceneSetting object
-	*/
 	public Settings getSettings() {
 		return settings;
 	}
 	
-	/**
-	 * @return camera - Scene's current camera object
-	 */
 	public Camera getCamera() {
 		return camera;
 	}

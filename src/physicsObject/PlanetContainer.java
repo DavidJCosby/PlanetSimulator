@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * Contains all of the planets in a scene.
+ * Contains all of the planets in a ProjectData object.
  * @author David Cosby
  */
 public class PlanetContainer {

@@ -14,9 +14,9 @@ public class PlanetDisplayContainer {
 		
 	}
 	
-	public void addPlanetDisplay(PlanetDisplay renderObject) {
-		planetDisplays.add(renderObject);
-		planetDisplaysByID.put(renderObject.getID(), renderObject);
+	public void addPlanetDisplay(PlanetDisplay planetDisplay) {
+		planetDisplays.add(planetDisplay);
+		planetDisplaysByID.put(planetDisplay.getID(), planetDisplay);
 	}
 	
 	public PlanetDisplay getPlanetDisplayByIndex(int index) {

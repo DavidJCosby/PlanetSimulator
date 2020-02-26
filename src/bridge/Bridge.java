@@ -9,7 +9,7 @@ import window.WindowManager;
  * @author David Cosby
  */
 public class Bridge {
-	private static ProjectData scene;
+	private static ProjectData projectData;
 	private static Renderer renderer;
 	private static WindowManager windowManager;
 	//public static Scheduler scheduler;
@@ -17,11 +17,11 @@ public class Bridge {
 	
 	
 	public static ProjectData getProjectData() {
-		return scene;
+		return projectData;
 	}
 	
 	public static void setProjectData(ProjectData newProjectData) {
-		scene = newProjectData;
+		projectData = newProjectData;
 	}
 	
 	public static Renderer getRenderer() {
