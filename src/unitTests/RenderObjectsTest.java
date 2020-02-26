@@ -16,20 +16,20 @@ class RenderObjectsTest {
 	
 	@Test
 	void testConstruction() {
-		RenderObject obj = new RenderObject(32);
+		PlanetDisplay obj = new PlanetDisplay(32);
 		assertNotNull(obj);
 	}
 	
 	@Test
 	void testPosition() {
-		RenderObject obj = new RenderObject(17);
+		PlanetDisplay obj = new PlanetDisplay(17);
 		obj.setPosition(new Vector(18, 32));
 		compareVectors(new Vector(18, 32), obj.getPosition());
 	}
 	
 	@Test
 	void testIdentification() {
-		RenderObject obj = new RenderObject(2);
+		PlanetDisplay obj = new PlanetDisplay(2);
 		assertEquals(2, obj.getID());
 		obj.setID(83);
 		assertEquals(83, obj.getID());
@@ -38,24 +38,45 @@ class RenderObjectsTest {
 	// RenderObjectContainer.java
 	@Test
 	void testContainerConstruction() {
-		RenderObjectContainer cont = new RenderObjectContainer();
+		PlanetDisplayContainer cont = new PlanetDisplayContainer();
 		assertNotNull(cont);
 	}
 	
 	@Test
 	void testRegistration() {
-		RenderObjectContainer cont = new RenderObjectContainer();
-		RenderObject obj1 = new RenderObject(8);
-		RenderObject obj2 = new RenderObject(9);
+		PlanetDisplayContainer cont = new PlanetDisplayContainer();
+		PlanetDisplay obj1 = new PlanetDisplay(8);
+		PlanetDisplay obj2 = new PlanetDisplay(9);
 		
-		cont.addRenderObject(obj1);
-		assertEquals(1, cont.getNumberOfRenderObjects());
+		cont.addPlanetDisplay(obj1);
+		assertEquals(1, cont.getNumberOfPlanetDisplays());
 		
-		cont.addRenderObject(obj2);
-		assertEquals(2, cont.getNumberOfRenderObjects());
+		cont.addPlanetDisplay(obj2);
+		assertEquals(2, cont.getNumberOfPlanetDisplays());
 		
-		assertSame(obj1, cont.getRenderObjectByIndex(0));
-		assertSame(obj2, cont.getRenderObjectByID(9));
+		assertSame(obj1, cont.getPlanetDisplayByIndex(0));
+		assertSame(obj2, cont.getPlanetDisplayByID(9));
+	}
+	
+	// SimulationPane.java
+	@Test
+	void testSimPaneConstruction() {
+		SimulationPane simPane = new SimulationPane();
+		assertNotNull(simPane);
+	}
+	
+	@Test
+	void testAddPlanetDisplay() {
+		SimulationPane simPane = new SimulationPane();
+		PlanetDisplay rObj = new PlanetDisplay(22);
+		simPane.addPlanetDisplay(rObj);
+		assertSame(rObj, simPane.getPlanetDisplays().getChildren().get(0));
+	}
+	
+	@Test
+	void testClip() { // just kinda bugging me in the coverage chart, sorry.
+		SimulationPane simPane = new SimulationPane();
+		simPane.resize(1234, 567);
 	}
 
 }

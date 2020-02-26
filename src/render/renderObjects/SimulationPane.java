@@ -6,7 +6,7 @@ import javafx.scene.shape.Rectangle;
 
 
 public class SimulationPane extends Pane {
-	private Group renderObjects = new Group();
+	private Group planetDisplays = new Group();
 	private Rectangle clip = new Rectangle();
 	
 	public SimulationPane() {
@@ -15,7 +15,7 @@ public class SimulationPane extends Pane {
 	}
 	
 	private void setup() {
-		getChildren().add(renderObjects);
+		getChildren().add(planetDisplays);
 		setupClip();
 	}
 	
@@ -27,7 +27,11 @@ public class SimulationPane extends Pane {
 		});
 	}
 	
-	public void addRenderObject(RenderObject renderObject) {
-		renderObjects.getChildren().add(renderObject);
+	public void addPlanetDisplay(PlanetDisplay planetDisplay) {
+		planetDisplays.getChildren().add(planetDisplay);
+	}
+	
+	public Group getPlanetDisplays() {
+		return planetDisplays;
 	}
 }

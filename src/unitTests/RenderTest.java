@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import render.*;
-import render.renderObjects.RenderObjectContainer;
+import render.renderObjects.PlanetDisplayContainer;
 import vector.Vector;
 
 
@@ -59,9 +59,9 @@ class RenderTest {
 	}
 	
 	@Test
-	void testRenderObjectContainerRetrieval() {
+	void testPlanetDisplayContainerRetrieval() {
 		Renderer renderer = new Renderer();
-		assertTrue(renderer.getRenderObjectContainer() instanceof RenderObjectContainer);
+		assertTrue(renderer.getPlanetDisplayContainer() instanceof PlanetDisplayContainer);
 	}
 
 }
