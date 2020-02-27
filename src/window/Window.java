@@ -13,7 +13,7 @@ import javafx.stage.*;
 
 public class Window extends Stage {
 	private Group contents = new Group();
-	protected Scene scene = new Scene(contents, 300, 300, Color.web("#002b36"));
+	protected Scene scene = new Scene(contents, 600, 600, Color.web("#002b36"));
 	
 	
 	public Window() {

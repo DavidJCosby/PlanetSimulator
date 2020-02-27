@@ -1,6 +1,8 @@
-import physicsObject.Planet;
 import projectData.ProjectData;
+import scheduler.*;
 import render.*;
+import physics.PhysicsEngine;
+import planetManager.PlanetManager;
 import render.renderObjects.*;
 import vector.Vector;
 import bridge.Bridge;
@@ -8,6 +10,7 @@ import window.*;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
+import physics.physicsObject.Planet;
 
 public class test extends Application {
 	
@@ -21,12 +24,37 @@ public class test extends Application {
 		WindowManager windowManager = new WindowManager();
 		Bridge.setWindowManager(windowManager);
 		
+		Scheduler scheduler = new Scheduler();
+		Bridge.setScheduler(scheduler);
+		
+		PhysicsEngine physicsEngine = new PhysicsEngine();
+		Bridge.setPhysicsEngine(physicsEngine);
+		
+		PlanetManager planetManager = new PlanetManager();
+		Bridge.setPlanetManager(planetManager);
+		
 	}
 	
 	@Override
 	public void start(Stage primaryStage) {
 		setupBridge();
 		Bridge.getWindowManager().showProjectWindow();
+		
+		Planet p2 = new Planet();
+		p2.setPosition(new Vector(0, 0));
+		p2.setMass(6.9e20);
+		p2.setVelocity(new Vector(100, 200));
+		Bridge.getPlanetManager().registerPlanet(p2);
+		
+		
+		Scheduler epic = Bridge.getScheduler();
+		Task task = new RenderTask(6);
+		epic.scheduleRegularTask("Render", task, 30);
+	}
+	
+	@Override
+	public void stop() {
+		Bridge.getScheduler().stop();
 	}
 	
 	public static void main(String[] args) {

@@ -3,6 +3,9 @@ package bridge;
 import projectData.ProjectData;
 import render.Renderer;
 import window.WindowManager;
+import scheduler.Scheduler;
+import physics.PhysicsEngine;
+import planetManager.PlanetManager;
 
 /**
  * Static reference point for high level components.
@@ -12,6 +15,9 @@ public class Bridge {
 	private static ProjectData projectData;
 	private static Renderer renderer;
 	private static WindowManager windowManager;
+	private static Scheduler scheduler;
+	private static PhysicsEngine physicsEngine;
+	private static PlanetManager planetManager;
 	//public static Scheduler scheduler;
 	//public static UI ui;
 	
@@ -38,5 +44,29 @@ public class Bridge {
 	
 	public static void setWindowManager(WindowManager newWindowManager) {
 		windowManager = newWindowManager;
+	}
+	
+	public static void setScheduler(Scheduler newScheduler) {
+		scheduler = newScheduler;
+	}
+	
+	public static Scheduler getScheduler() {
+		return scheduler;
+	}
+	
+	public static void setPhysicsEngine(PhysicsEngine newPhyiscsEngine) {
+		physicsEngine = newPhyiscsEngine;
+	}
+	
+	public static PhysicsEngine getPhysicsEngine() {
+		return physicsEngine;
+	}
+	
+	public static void setPlanetManager(PlanetManager newPlanetManager) {
+		planetManager = newPlanetManager;
+	}
+	
+	public static PlanetManager getPlanetManager() {
+		return planetManager;
 	}
 }

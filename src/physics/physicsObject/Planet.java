@@ -1,4 +1,4 @@
-package physicsObject;
+package physics.physicsObject;
 
 import unitConversion.Rates;
 import vector.Vector;

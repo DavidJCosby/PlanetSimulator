@@ -1,4 +1,4 @@
-package physicsObject;
+package physics.physicsObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -16,7 +16,7 @@ public class SimulationPane extends Pane {
 	
 	private void setup() {
 		getChildren().add(planetDisplays);
-		setupClip();
+		//setupClip();
 	}
 	
 	private void setupClip() {

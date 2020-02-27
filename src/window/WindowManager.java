@@ -14,6 +14,10 @@ public class WindowManager {
 
 	}
 	
+	public ProjectWindow getProjectWindow() {
+		return projectWindow;
+	}
+	
 	public void showProjectWindow() {
 		projectWindow.show();
 	}

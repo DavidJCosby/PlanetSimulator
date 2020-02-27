@@ -1,4 +1,4 @@
-package physicsObject;
+package physics.physicsObject;
 
 import vector.Vector;
 
