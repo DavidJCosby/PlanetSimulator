@@ -1,8 +1,9 @@
-package planets.render.renderObjects;
+package ui;
 
 import javafx.scene.layout.Pane;
 import javafx.scene.Group;
 import javafx.scene.shape.Rectangle;
+import planets.render.renderObjects.PlanetDisplay;
 
 
 public class SimulationPane extends Pane {

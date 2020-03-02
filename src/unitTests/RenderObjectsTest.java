@@ -7,6 +7,7 @@ import vector.Vector;
 import org.junit.jupiter.api.Test;
 
 import planets.render.renderObjects.*;
+import ui.SimulationPane;
 
 class RenderObjectsTest {
 

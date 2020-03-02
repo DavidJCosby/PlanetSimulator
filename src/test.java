@@ -35,6 +35,12 @@ public class test extends Application {
 		
 	}
 	
+	private void setStyle(String styleName) {
+		//Bridge.getWindowManager().getProjectWindow().scene.getStylesheets().clear();
+		Bridge.getWindowManager().getProjectWindow().scene.getStylesheets().add("styles/" + styleName+ ".css");
+
+	}
+	
 	@Override
 	public void start(Stage primaryStage) {
 		setupBridge();
@@ -43,9 +49,10 @@ public class test extends Application {
 		Planet p2 = new Planet();
 		p2.setPosition(new Vector(0, 0));
 		p2.setMass(6.9e20);
-		p2.setVelocity(new Vector(100, 200));
+		p2.setVelocity(new Vector(10, -200));
 		Bridge.getPlanetManager().registerPlanet(p2);
 		
+		setStyle("gruvbox");
 		
 		Scheduler epic = Bridge.getScheduler();
 		Task task = new RenderTask(6);

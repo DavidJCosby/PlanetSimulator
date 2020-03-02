@@ -5,6 +5,7 @@ import bridge.Bridge;
 import planets.physics.physicsObjects.*;
 import planets.render.renderObjects.*;
 import projectData.ProjectData;
+import ui.SimulationPane;
 import window.WindowManager;
 
 

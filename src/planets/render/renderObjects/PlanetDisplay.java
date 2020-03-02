@@ -16,6 +16,7 @@ public class PlanetDisplay extends Circle {
 	
 	public PlanetDisplay(int ID) {
 		this.ID = ID;
+		this.setId("Planet");
 		createSelf();
 	}
 	
@@ -37,8 +38,8 @@ public class PlanetDisplay extends Circle {
 	}
 	
 	private void createSelf() {
-		this.setStroke(Color.web("#859900")); // TODO: replace with CSS
-		this.setFill(Color.web("#859900"));
+		//this.setStroke(Color.web("#859900")); // TODO: replace with CSS
+		//this.setFill(Color.web("#859900"));
 	}
 	
 	private void updatePosition() {

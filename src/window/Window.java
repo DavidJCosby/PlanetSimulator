@@ -13,7 +13,7 @@ import javafx.stage.*;
 
 public class Window extends Stage {
 	private Group contents = new Group();
-	protected Scene scene = new Scene(contents, 600, 600, Color.web("#002b36"));
+	public Scene scene = new Scene(contents, 600, 600);
 	
 	
 	public Window() {
@@ -31,5 +31,9 @@ public class Window extends Stage {
 	
 	public void setContents(Group newContents) {
 		contents = newContents;
+	}
+	
+	public void addCSS(String cssFileName) {
+		scene.getStylesheets().add(cssFileName);
 	}
 }

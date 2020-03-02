@@ -9,10 +9,16 @@ import javafx.stage.Stage;
  */
 public class WindowManager {
 	ProjectWindow projectWindow = new ProjectWindow();
+	final String stylesPre = "styles/";
 	
 	public WindowManager() {
-
+		setSkin("gruvbox.css");
 	}
+	
+	public void setSkin(String stylesName) {
+		projectWindow.addCSS(stylesPre + stylesName);
+	}
+	
 	
 	public ProjectWindow getProjectWindow() {
 		return projectWindow;
