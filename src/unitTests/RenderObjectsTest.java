@@ -1,10 +1,12 @@
 package unitTests;
 
 import static org.junit.jupiter.api.Assertions.*;
-import render.renderObjects.*;
+
 import vector.Vector;
 
 import org.junit.jupiter.api.Test;
+
+import planets.render.renderObjects.*;
 
 class RenderObjectsTest {
 

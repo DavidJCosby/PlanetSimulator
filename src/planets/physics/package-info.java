@@ -2,4 +2,4 @@
  * @author David Cosby
  *
  */
-package physics;
+package planets.physics;

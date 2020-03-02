@@ -1,8 +1,8 @@
 package planetManager;
 
-import physics.physicsObject.Planet;
-import render.renderObjects.*;
 import bridge.Bridge;
+import planets.physics.physicsObjects.Planet;
+import planets.render.renderObjects.*;
 
 
 public class PlanetManager {

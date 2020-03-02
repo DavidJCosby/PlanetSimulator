@@ -1,4 +1,4 @@
-package physics.physicsObject;
+package planets.physics.physicsObjects;
 
 import unitConversion.Rates;
 import vector.Vector;

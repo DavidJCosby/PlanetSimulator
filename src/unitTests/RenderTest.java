@@ -4,8 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import render.*;
-import render.renderObjects.PlanetDisplayContainer;
+import planets.render.*;
+import planets.render.renderObjects.PlanetDisplayContainer;
 import vector.Vector;
 
 

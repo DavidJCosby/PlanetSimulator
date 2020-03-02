@@ -1,9 +1,9 @@
 package window;
 
-import render.renderObjects.SimulationPane;
 import bridge.Bridge;
 
 import javafx.scene.layout.*;
+import planets.render.renderObjects.SimulationPane;
 
 public class ProjectWindow extends Window {
 	private BorderPane borderPane = new BorderPane();

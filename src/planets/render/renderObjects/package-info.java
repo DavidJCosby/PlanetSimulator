@@ -3,4 +3,4 @@
  * @author David Cosby
  */
 
-package render.renderObjects;
+package planets.render.renderObjects;

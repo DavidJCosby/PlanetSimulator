@@ -1,16 +1,16 @@
 import projectData.ProjectData;
 import scheduler.*;
-import render.*;
-import physics.PhysicsEngine;
 import planetManager.PlanetManager;
-import render.renderObjects.*;
+import planets.physics.PhysicsEngine;
+import planets.physics.physicsObjects.Planet;
+import planets.render.*;
+import planets.render.renderObjects.*;
 import vector.Vector;
 import bridge.Bridge;
 import window.*;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import physics.physicsObject.Planet;
 
 public class test extends Application {
 	

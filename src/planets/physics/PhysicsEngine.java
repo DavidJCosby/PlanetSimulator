@@ -1,7 +1,7 @@
-package physics;
+package planets.physics;
 
 import bridge.Bridge;
-import physics.physicsObject.*;
+import planets.physics.physicsObjects.*;
 
 public class PhysicsEngine {
 	long lastUpdate = System.currentTimeMillis();

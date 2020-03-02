@@ -1,4 +1,4 @@
-package render.renderObjects;
+package planets.render.renderObjects;
 
 import java.util.ArrayList;
 import java.util.HashMap;

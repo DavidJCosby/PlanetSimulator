@@ -1,4 +1,4 @@
-package physics.physicsObject;
+package planets.physics.physicsObjects;
 
 import java.util.ArrayList;
 import java.util.HashMap;

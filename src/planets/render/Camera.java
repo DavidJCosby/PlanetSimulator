@@ -1,4 +1,4 @@
-package render;
+package planets.render;
 
 import vector.Vector;
 

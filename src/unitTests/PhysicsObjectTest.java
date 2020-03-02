@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import physics.physicsObject.*;
+import planets.physics.physicsObjects.*;
 import vector.Vector;
 
 class PhysicsObjectTest {

@@ -1,7 +1,7 @@
 package projectData;
 
-import physics.physicsObject.PlanetContainer;
-import render.Camera;
+import planets.physics.physicsObjects.PlanetContainer;
+import planets.render.Camera;
 
 
 /**

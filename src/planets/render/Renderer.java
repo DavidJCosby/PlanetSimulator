@@ -1,9 +1,9 @@
-package render;
+package planets.render;
 
-import render.renderObjects.*;
 import vector.Vector;
 import bridge.Bridge;
-import physics.physicsObject.*;
+import planets.physics.physicsObjects.*;
+import planets.render.renderObjects.*;
 import projectData.ProjectData;
 import window.WindowManager;
 

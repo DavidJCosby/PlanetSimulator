@@ -1,11 +1,11 @@
 package bridge;
 
 import projectData.ProjectData;
-import render.Renderer;
 import window.WindowManager;
 import scheduler.Scheduler;
-import physics.PhysicsEngine;
 import planetManager.PlanetManager;
+import planets.physics.PhysicsEngine;
+import planets.render.Renderer;
 
 /**
  * Static reference point for high level components.
