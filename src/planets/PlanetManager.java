@@ -1,4 +1,4 @@
-package planetManager;
+package planets;
 
 import bridge.Bridge;
 import planets.physics.physicsObjects.Planet;

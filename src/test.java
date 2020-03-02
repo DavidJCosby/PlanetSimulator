@@ -1,6 +1,6 @@
 import projectData.ProjectData;
 import scheduler.*;
-import planetManager.PlanetManager;
+import planets.PlanetManager;
 import planets.physics.PhysicsEngine;
 import planets.physics.physicsObjects.Planet;
 import planets.render.*;

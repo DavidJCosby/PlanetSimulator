@@ -3,7 +3,7 @@ package bridge;
 import projectData.ProjectData;
 import window.WindowManager;
 import scheduler.Scheduler;
-import planetManager.PlanetManager;
+import planets.PlanetManager;
 import planets.physics.PhysicsEngine;
 import planets.render.Renderer;
 
