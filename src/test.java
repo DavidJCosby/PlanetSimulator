@@ -36,9 +36,9 @@ public class test extends Application {
 	}
 	
 	private void setStyle(String styleName) {
-		//Bridge.getWindowManager().getProjectWindow().scene.getStylesheets().clear();
+		Bridge.getWindowManager().getProjectWindow().scene.getStylesheets().clear();
 		Bridge.getWindowManager().getProjectWindow().scene.getStylesheets().add("styles/" + styleName+ ".css");
-
+		System.out.println("applied " + styleName);
 	}
 	
 	@Override
@@ -46,13 +46,15 @@ public class test extends Application {
 		setupBridge();
 		Bridge.getWindowManager().showProjectWindow();
 		
+		setStyle("gruvbox");
+
+		
 		Planet p2 = new Planet();
 		p2.setPosition(new Vector(0, 0));
 		p2.setMass(6.9e20);
 		p2.setVelocity(new Vector(10, -200));
 		Bridge.getPlanetManager().registerPlanet(p2);
 		
-		setStyle("gruvbox");
 		
 		Scheduler epic = Bridge.getScheduler();
 		Task task = new RenderTask(6);
