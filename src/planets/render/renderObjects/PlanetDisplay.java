@@ -40,6 +40,7 @@ public class PlanetDisplay extends Circle {
 	private void createSelf() {
 		//this.setStroke(Color.web("#859900")); // TODO: replace with CSS
 		//this.setFill(Color.web("#859900"));
+		this.toBack();
 	}
 	
 	private void updatePosition() {

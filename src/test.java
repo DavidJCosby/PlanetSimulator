@@ -45,7 +45,6 @@ public class test extends Application {
 	public void start(Stage primaryStage) {
 		setupBridge();
 		Bridge.getWindowManager().showProjectWindow();
-		
 		setStyle("gruvbox");
 
 		
