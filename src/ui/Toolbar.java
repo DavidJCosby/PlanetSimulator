@@ -3,8 +3,10 @@ package ui;
 import javafx.scene.control.*;
 
 public class Toolbar extends ToolBar {
-	ToggleButton dragger = new ToggleButton("Drag");
-	ToggleButton creator = new ToggleButton("Create");
+	ToggleButton pan = new ToggleButton("Pan");
+	ToggleButton create = new ToggleButton("Create");
+	ToggleButton delete = new ToggleButton("Delete");
+
 
 	ToggleGroup mouseTools = new ToggleGroup();
 	
@@ -13,10 +15,17 @@ public class Toolbar extends ToolBar {
 	}
 	
 	private void build() {
-		creator.setSelected(true);
-		dragger.setToggleGroup(mouseTools);
-		creator.setToggleGroup(mouseTools);
-		getItems().addAll(dragger, creator);
+		create.setSelected(true);
+		pan.setFocusTraversable(false);
+		create.setFocusTraversable(false);
+		delete.setFocusTraversable(false);
+
+		pan.setToggleGroup(mouseTools);
+		create.setToggleGroup(mouseTools);
+		delete.setToggleGroup(mouseTools);
+		getItems().addAll(pan, create, delete);
+		
+		
 	}
 	
 }

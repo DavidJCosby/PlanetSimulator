@@ -13,7 +13,7 @@ import javafx.stage.*;
 
 public class Window extends Stage {
 	private Group contents = new Group();
-	public Scene scene = new Scene(contents, 600, 600);
+	public Scene scene = new Scene(contents, 1280, 720);
 	
 	
 	public Window() {

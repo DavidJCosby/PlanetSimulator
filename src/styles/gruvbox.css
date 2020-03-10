@@ -4,7 +4,8 @@
 	-fx-light-text-color: #ebdbb2;
 	-fx-dark-text-color: #282828;
 
-
+	-fx-faint-focus-color: transparent;
+	-fx-focus-color: transparent;
 	-fx-background-insets: 0px 0px 0px 0px;
 
 	-fx-color-inner-background: #3c3836, #3c3836, #3c3836, #3c3836;
@@ -61,3 +62,32 @@
 #bg {
 	-fx-background-color: #1d2021;
 }
+
+
+.split-pane:horizontal > .split-pane-divider {
+	-fx-padding: 1;
+	-fx-background-color: #3c3836;
+}
+
+#properties {
+	-fx-background-color: #32302f;
+}
+
+.titled-pane {
+	-fx-text-fill: -fx-text-base-color;
+	
+}
+
+.titled-pane > .title {
+	-fx-background-color: #282828, #282828, #282828;
+	-fx-font-size: 16;
+	-fx-background-insets: 0, 1, 2;
+	-fx-background-radius: 2 2 0 0, 2 2 0 0, 2 2 0 0;
+	-fx-padding: 0.2em 0.8em 0.25em 0.9em; /* 2 10 3 10 */
+	-fx-border-width: 1;
+	-fx-border-radius: 2;
+	-fx-border-color: #1d2021;
+}
+
+/* https://stackoverflow.com/questions/21451386/titled-pane-css-settings
+
