@@ -1,14 +1,28 @@
 .root {
-	-fx-base: #3c3836;
-	-fx-accent: #504945;
+	/* gruvbox dark */	
+	-fx-bg0h: #1d2021;
+	-fx-bg0: #282828;
+	-fx-bg0s: #32302f;
+	-fx-bg1: #3c3836;
+	-fx-bg2: #504945;
+	-fx-bg3: #665c54;
+	-fx-bg4: #7c6f64;
+	-fx-gray: #928374;
+	
+	-fx-base: -fx-bg1;
+	-fx-accent: -fx-bg2;
 	-fx-light-text-color: #ebdbb2;
-	-fx-dark-text-color: #282828;
+	-fx-dark-text-color: -fx-bg0;
 
 	-fx-faint-focus-color: transparent;
 	-fx-focus-color: transparent;
 	-fx-background-insets: 0px 0px 0px 0px;
+	
+	
+	-fx-mark-highlight-color: -fx-bg0;
+	-fx-mark-color: -fx-bg3;
 
-	-fx-color-inner-background: #3c3836, #3c3836, #3c3836, #3c3836;
+	-fx-color-inner-background: -fx-bg1, -fx-bg1, -fx-bg1, -fx-bg1;
 	-fx-padding: 0, 20, 0, 20;
 
 }
@@ -18,19 +32,19 @@
 }
 
 .tool-bar {
-	-fx-background-color: #282828, #282828, #282828, #282828 
+	-fx-background-color: -fx-bg0, -fx-bg0, -fx-bg0, -fx-bg0; 
 }
 
 .menu-bar {
-	-fx-background-color: #32302f, #32302f, #32302f, #32302f;
+	-fx-background-color: -fx-bg0s, -fx-bg0s, -fx-bg0s, -fx-bg0s;
 }
 
 .toggle-button {
 	-fx-faint-focus-color: transparent;
 	-fx-focus-color: transparent;
 	-fx-focus-traversable: false;
-	-fx-background-color: #3c3836, #3c3836, #3c3836, #3c3836;
-	-fx-border-color: #282828;
+	-fx-background-color: -fx-bg1, -fx-bg1, -fx-bg1, -fx-bg1;
+	-fx-border-color: -fx-bg0;
 	-fx-border-width: 1;
 	-fx-border-radius: 1;
 }
@@ -44,13 +58,13 @@
 }
 
 .toggle-button:pressed {
-	-fx-background-color: #504945, #504945, #504945, #504945;
+	-fx-background-color: -fx-bg2, -fx-bg2, -fx-bg2, -fx-bg2;
 
 }
 
 
 .context-menu {
-	-fx-background-color: #282828;
+	-fx-background-color: -fx-bg0;
 	-fx-padding: 0, 20, 0, 20;
 }
 
@@ -60,34 +74,54 @@
 }
 
 #bg {
-	-fx-background-color: #1d2021;
+	-fx-background-color: -fx-bg0h;
 }
 
 
 .split-pane:horizontal > .split-pane-divider {
 	-fx-padding: 1;
-	-fx-background-color: #3c3836;
+	-fx-background-color: -fx-bg1;
 }
 
 #properties {
-	-fx-background-color: #32302f;
+	-fx-background-color: -fx-bg0s;
 }
 
 .titled-pane {
 	-fx-text-fill: -fx-text-base-color;
 	
+	
 }
 
 .titled-pane > .title {
-	-fx-background-color: #282828, #282828, #282828;
-	-fx-font-size: 16;
+	-fx-background-color: -fx-bg0, -fx-bg0, -fx-bg0;
+	-fx-fontsize: 16;
 	-fx-background-insets: 0, 1, 2;
 	-fx-background-radius: 2 2 0 0, 2 2 0 0, 2 2 0 0;
 	-fx-padding: 0.2em 0.8em 0.25em 0.9em; /* 2 10 3 10 */
 	-fx-border-width: 1;
 	-fx-border-radius: 2;
-	-fx-border-color: #1d2021;
+	-fx-border-color: -fx-bg0h;
 }
 
-/* https://stackoverflow.com/questions/21451386/titled-pane-css-settings
+.titled-pane > .title > .arrow-button .arrow {
+	-fx-background-color: -fx-bg2, -fx-bg2;
+	-fx-background-insets: 1 0 -1 0, 0;
+	-fx-padding: 0.25em 0.3125em 0.25em 0.3125em; /* 3 3.75 3 3.75 */
+	-fx-shape: "M 0 0 h 7 l -3.5 4 z";
+}
+
+.titled-pane:collapsed > .title > .arrow-button .arrow {
+	-fx-rotate: -90;
+	-fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
+}
+
+.titled-pane > *.content {
+	-fx-border-width: 0 0.4em 0 0.4em;
+	-fx-border-color: -fx-bg0s;
+	-fx-background-insets: 0, 0 1 1 1;
+	-fx-padding: 0.167em;
+ }
+
+/* https://stackoverflow.com/questions/21451386/titled-pane-csssettings
 

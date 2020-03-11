@@ -15,7 +15,7 @@ public class Toolbar extends ToolBar {
 	}
 	
 	private void build() {
-		create.setSelected(true);
+		pan.setSelected(true);
 		pan.setFocusTraversable(false);
 		create.setFocusTraversable(false);
 		delete.setFocusTraversable(false);

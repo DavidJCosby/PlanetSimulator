@@ -13,7 +13,8 @@ public class PropertiesPane extends Pane {
 	
 	private void build() {
 		setId("properties");
-		setMaxWidth(400);
+		setMaxWidth(420);
+		setMinWidth(125);
 		getChildren().addAll(data);
 		data.minWidthProperty().bind(this.widthProperty());
 	}
