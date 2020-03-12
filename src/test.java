@@ -1,4 +1,6 @@
 import projectData.ProjectData;
+
+import mouseTools.*;
 import scheduler.*;
 import planets.PlanetManager;
 import planets.physics.PhysicsEngine;
@@ -16,6 +18,7 @@ public class test extends Application {
 	
 	private void setupBridge() {
 		ProjectData data = new ProjectData();
+		data.setCurrentTool(new Dragger());
 		Bridge.setProjectData(data);
 		
 		Renderer renderer = new Renderer();
