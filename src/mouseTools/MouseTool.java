@@ -1,11 +1,12 @@
 package mouseTools;
 
-import javafx.scene.input.InputEvent;
+import javafx.scene.input.*;
 
 public abstract class MouseTool {
 
-	public abstract void onMouseDown(InputEvent e);
-	public abstract void onMouseUp(InputEvent e);
-	public abstract void onMouseMove(InputEvent e);
+	public abstract void onMouseDown(MouseEvent e);
+	public abstract void onMouseUp(MouseEvent e);
+	public abstract void onMouseMove(MouseEvent e);
+	public abstract void onScroll(ScrollEvent e);
 	
 }

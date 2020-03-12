@@ -46,6 +46,10 @@ public class SimulationPane extends Pane {
 		setOnMouseDragged((event) -> {
 			data.getCurrentTool().onMouseMove(event);
 		});
+		
+		setOnScroll((event) -> {
+			data.getCurrentTool().onScroll(event);
+		});
 	}
 	
 	

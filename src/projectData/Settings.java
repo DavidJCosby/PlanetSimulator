@@ -7,7 +7,8 @@ package projectData;
 public class Settings {
 	private PhysicsSettings physics = new PhysicsSettings();
 	private RenderSettings render = new RenderSettings();
-	
+	private ControlSettings control = new ControlSettings();
+
 	public Settings() {
 		
 	}
@@ -20,4 +21,8 @@ public class Settings {
 		return render;
 	}
 
+	public ControlSettings getControlSettings() {
+		return control;
+	}
+	
 }

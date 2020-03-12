@@ -49,7 +49,8 @@ public class Camera {
 		return pixelsPerKilometer;
 	}
 	
-	public void setZoom(double newPixelsPerKilometer) { 
+	public void setZoom(double newPixelsPerKilometer) {
+		offset = offset.mul(newPixelsPerKilometer/pixelsPerKilometer);
 		pixelsPerKilometer = newPixelsPerKilometer;
 	}
 	
@@ -69,6 +70,15 @@ public class Camera {
 	 */
 	public double getScreenPixelLength(double kilometerLength) {
 		return kilometerLength * pixelsPerKilometer;
+	}
+	
+	
+	public Vector getVectorDisplacementFromPixelDisplacement(Vector pixelDisplacement) {
+		return pixelDisplacement.div(pixelsPerKilometer);
+	}
+	
+	public double getVectorLengthFromPixelLength(double pixelLength) {
+		return pixelLength / pixelsPerKilometer;
 	}
 	
 }

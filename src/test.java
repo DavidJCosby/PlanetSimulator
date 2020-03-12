@@ -18,7 +18,6 @@ public class test extends Application {
 	
 	private void setupBridge() {
 		ProjectData data = new ProjectData();
-		data.setCurrentTool(new Dragger());
 		Bridge.setProjectData(data);
 		
 		Renderer renderer = new Renderer();
@@ -35,6 +34,9 @@ public class test extends Application {
 		
 		PlanetManager planetManager = new PlanetManager();
 		Bridge.setPlanetManager(planetManager);
+		
+		data.setCurrentTool(new Dragger());
+
 		
 	}
 	
