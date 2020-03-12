@@ -13,6 +13,7 @@ public class ProjectWindow extends Window {
 	private SplitPane split = new SplitPane();
 	private SimulationPane simulationPane = new SimulationPane();
 	private PropertiesPane propertiesPane = new PropertiesPane();
+	private Timebar timebar = new Timebar();
 	private Topbar topbar = new Topbar();
 	private Toolbar toolbar = new Toolbar();
 	
@@ -31,6 +32,7 @@ public class ProjectWindow extends Window {
 		borderPane.setTop(topbar);
 		centerPane.setTop(toolbar);
 		centerPane.setCenter(simulationPane);
+		centerPane.setBottom(timebar);
 		
 		borderPane.setCenter(split);
 		split.getItems().addAll(propertiesPane, centerPane);

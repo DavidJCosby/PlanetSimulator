@@ -14,9 +14,15 @@ public class PhysicsSettings {
 	 */
 	private int refreshRateInHertz;
 	
+	
+	private boolean playing;
+	
+
+	
 	public PhysicsSettings() {
 		simulationSpeedScale = 1.0;
 		refreshRateInHertz = 60;
+		playing = true;
 	}
 	
 
@@ -40,6 +46,14 @@ public class PhysicsSettings {
 	 */
 	public void setRefreshRateInHertz(int newRefreshRateInHertz) {
 		refreshRateInHertz = newRefreshRateInHertz;
+	}
+	
+	public boolean getPlaying() {
+		return playing;
+	}
+	
+	public void setPlaying(boolean newPlaying) {
+		playing = newPlaying;
 	}
 
 	

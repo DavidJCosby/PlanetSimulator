@@ -118,8 +118,22 @@
 	-fx-border-color: -fx-bg0s;
 	-fx-background-insets: 0, 0 1 1 1;
 	-fx-padding: 0.167em;
-	-fx-background-color: -fx-bg1;
+	-fx-background-color: -fx-bg2;
  }
 
+#timebar {
+	-fx-background-color: -fx-bg0;
+	-fx-border-width: 1.4 0 0 0;
+	-fx-border-color: -fx-bg1;
+}
+
+.button {
+	-fx-background-color: -fx-bg1 -fx-bg1 -fx-bg1 -fx-bg1;
+}
+
+.button:pressed {
+	-fx-background-color: -fx-bg2 -fx-bg2 -fx-bg2 -fx-bg2;
+
+}
 /* https://stackoverflow.com/questions/21451386/titled-pane-csssettings
 
