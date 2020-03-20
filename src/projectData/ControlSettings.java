@@ -16,7 +16,7 @@ public class ControlSettings {
 	}
 	
 	private void setup() {
-		mouseBindings.put("CameraPan", MouseButton.MIDDLE);
+		mouseBindings.put("CameraPan", MouseButton.PRIMARY);
 	}
 
 	

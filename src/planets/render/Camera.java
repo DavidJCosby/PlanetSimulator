@@ -50,7 +50,6 @@ public class Camera {
 	}
 	
 	public void setZoom(double newPixelsPerKilometer) {
-		offset = offset.mul(newPixelsPerKilometer/pixelsPerKilometer);
 		pixelsPerKilometer = newPixelsPerKilometer;
 	}
 	
