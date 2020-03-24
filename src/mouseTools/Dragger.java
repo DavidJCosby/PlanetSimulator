@@ -81,23 +81,26 @@ public class Dragger extends MouseTool {
 	
 	private void zoom(double deltaRatio, Vector zoomCenter) {
 		//Vector screenSize = getScreenSize();
+		
+		zoomCenter = camera.getVectorDisplacementFromPixelDisplacement(zoomCenter);
+		Vector screenCenter = getScreenCenter();
+		
+		screenCenter = camera.getVectorDisplacementFromPixelDisplacement(screenCenter);
+
+		
 		double zoomBefore = camera.getZoom();
 		double newZoom = zoomBefore * deltaRatio;
-		//camera.setZoom(newZoom);
+		camera.setZoom(newZoom);
 
-		Vector screenCenter = getScreenCenter();
 		Vector zoomCenterRelative = screenCenter.sub(zoomCenter);
-		System.out.println(camera.getScreenDisplacementFromCenter(zoomCenterRelative));
 		
 		double previousZoomFactor = 1 - (zoomBefore - newZoom);
 		Vector previousRelative = zoomCenterRelative.mul(previousZoomFactor);
 		
-		Vector offset = zoomCenterRelative.sub(previousRelative);
+		Vector offset = zoomCenterRelative.sub(previousRelative).div(newZoom);
 
-		offset = camera.getVectorDisplacementFromPixelDisplacement(offset.mul(1));
-		//System.out.println(offset);
 		
-		//camera.setOffset(camera.getOffset().add(offset));
+		camera.setOffset(camera.getOffset().add(offset));
 
 
 	}
