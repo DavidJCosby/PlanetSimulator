@@ -23,7 +23,7 @@ public class Timebar extends BorderPane {
 	}
 	
 	private void build() {
-		setPrefHeight(60);
+		setPrefHeight(73);
 		setCenter(buttonGroup);
 		buttonGroup.setMaxWidth(170);
 		Insets padding = new Insets(5, 0, 15, 15);
