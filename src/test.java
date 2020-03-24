@@ -52,16 +52,24 @@ public class test extends Application {
 		Bridge.getWindowManager().showProjectWindow();
 		setStyle("gruvbox");
 
+	
+		Planet p1 = new Planet();
+		p1.setPosition(new Vector(0, 0));
+		p1.setMass(5.972e24);
+		p1.setDensity(5.51);
+		Bridge.getPlanetManager().registerPlanet(p1);
 		
 		Planet p2 = new Planet();
-		p2.setPosition(new Vector(0, 0));
-		p2.setMass(6.9e20);
-		p2.setVelocity(new Vector(10, -200));
+		p2.setPosition(new Vector(384400, 0));
+		p2.setMass(7.348e22);
+		p2.setVelocity(new Vector(0, 32.19));
+		//p2.setVelocity(new Vector(0, -32190));
 		Bridge.getPlanetManager().registerPlanet(p2);
-		
+	
+	
 		
 		Scheduler epic = Bridge.getScheduler();
-		Task task = new RenderTask(2);
+		Task task = new RenderTask(1);
 		epic.scheduleRegularTask("Render", task, 120);
 	}
 	
