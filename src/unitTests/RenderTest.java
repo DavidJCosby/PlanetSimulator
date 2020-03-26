@@ -48,6 +48,11 @@ class RenderTest {
 		assertEquals(6.0, cam.getScreenPixelLength(20));
 		
 		compareVectors(new Vector(72, -9), cam.getScreenDisplacementFromCenter(new Vector(240, -30)));
+	
+		assertEquals(20, cam.getVectorLengthFromPixelLength(6));
+		
+		compareVectors(new Vector(240, -30), cam.getVectorDisplacementFromPixelDisplacement(new Vector(72, -9)));
+
 	}
 	
 	// Renderer.java

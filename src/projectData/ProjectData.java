@@ -1,6 +1,7 @@
 package projectData;
 
-import planets.physics.physicsObjects.PlanetContainer;
+import planets.physics.physicsObjects.*;
+
 import mouseTools.MouseTool;
 import planets.render.Camera;
 
@@ -14,6 +15,7 @@ public class ProjectData {
 	private Settings settings = new Settings();
 	private static MouseTool currentTool; 
 	private Camera camera = new Camera();
+	private Planet selection;
 	
 	public ProjectData() {
 		
@@ -38,6 +40,14 @@ public class ProjectData {
 	
 	public void setCurrentTool(MouseTool tool) {
 		currentTool = tool;
+	}
+	
+	public Planet getSelection() {
+		return selection;
+	}
+	
+	public void setSelection(Planet newSelection) {
+		selection = newSelection;
 	}
 	
 }

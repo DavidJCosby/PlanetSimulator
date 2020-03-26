@@ -21,7 +21,7 @@ public class PhysicsEngine {
 	}
 	
 	
-	public void updatePosition(Planet p, double deltaSeconds) {
+	private void updatePosition(Planet p, double deltaSeconds) {
 		Vector deltaP = p.getVelocity().mul(deltaSeconds);
 		p.setPosition(p.getPosition().add(deltaP));
 	}
