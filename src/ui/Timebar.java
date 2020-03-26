@@ -41,13 +41,13 @@ public class Timebar extends BorderPane {
 	
 		play.setOnAction((event) -> {
 			boolean playing = settings.getPlaying();
-			if (playing == true) {
+			if (playing == false) {
 				play.setText("||");
-				settings.setPlaying(false);
+				settings.setPlaying(true);
 			}
 			else {
 				play.setText(">");
-				settings.setPlaying(true);
+				settings.setPlaying(false);
 			}
 		});
 		
