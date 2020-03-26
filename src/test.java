@@ -62,11 +62,10 @@ public class test extends Application {
 		Planet p2 = new Planet();
 		p2.setPosition(new Vector(384400, 0));
 		p2.setMass(7.348e22);
-		p2.setVelocity(new Vector(0, 32.19));
+		p2.setVelocity(new Vector(0, -1.07));
 		//p2.setVelocity(new Vector(0, -32190));
 		Bridge.getPlanetManager().registerPlanet(p2);
-	
-	
+
 		
 		Scheduler epic = Bridge.getScheduler();
 		Task task = new RenderTask(1);

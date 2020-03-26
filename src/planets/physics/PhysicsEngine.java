@@ -26,7 +26,7 @@ public class PhysicsEngine {
 		// f = m*a
 		// a = f/m
 		Vector direction = b.getPosition().sub(a.getPosition()).unit();
-		Vector acceleration = direction.mul(strength).div(a.getMass());
+		Vector acceleration = direction.mul(strength).div(a.getMass()).div(1000);
 		
 		Vector deltaV = acceleration.mul(deltaSeconds);
 		a.setVelocity(a.getVelocity().add(deltaV));
