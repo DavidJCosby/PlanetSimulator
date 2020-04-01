@@ -35,6 +35,13 @@ public class Renderer {
 		return planetDisplayContainer;
 	}
 	
+	private void selectionFlash(PlanetDisplay planetDisplay) {
+		double now = (double)System.currentTimeMillis();
+		double multiplier = Math.sin(now / 250) / 2 + 0.5;
+		planetDisplay.setStrokeWidth(multiplier * 4);
+	}
+	
+	
 	public void render() {
 		ProjectData projectData = Bridge.getProjectData();
 		Camera camera = projectData.getCamera();
@@ -44,6 +51,12 @@ public class Renderer {
 		int loopSize = planetContainer.getNumberOfPlanets();
 		for (int i = 0; i < loopSize; i++) {
 			PlanetDisplay planetDisplay = planetDisplayContainer.getPlanetDisplayByIndex(i);
+			planetDisplay.setStrokeWidth(0); // hacky default
+			if (projectData.getSelection() != null) {
+				if (projectData.getSelection().getID() == planetDisplay.getID()) {
+					selectionFlash(planetDisplay);
+				}
+			}
 			Planet planet = planetContainer.getPlanetByIndex(i);
 			planetDisplay.setPosition(screenCenter.add(camera.getScreenDisplacementFromCenter(planet.getPosition())));
 			planetDisplay.setRadius(camera.getScreenPixelLength(planet.getRadius()));

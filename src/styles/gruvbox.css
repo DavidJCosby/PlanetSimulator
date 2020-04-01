@@ -1,5 +1,5 @@
 .root {
-	/* gruvbox dark */	
+	/* gruvbox dark */
 	-fx-bg0h: #1d2021;
 	-fx-bg0: #282828;
 	-fx-bg0s: #32302f;
@@ -8,7 +8,9 @@
 	-fx-bg3: #665c54;
 	-fx-bg4: #7c6f64;
 	-fx-gray: #928374;
-	
+
+	-fx-planet-h: #fb4934a6;
+
 	-fx-base: -fx-bg1;
 	-fx-accent: -fx-bg2;
 	-fx-light-text-color: #ebdbb2;
@@ -17,8 +19,9 @@
 	-fx-faint-focus-color: transparent;
 	-fx-focus-color: transparent;
 	-fx-background-insets: 0px 0px 0px 0px;
-	
-	
+
+
+
 
 
 	-fx-color-inner-background: -fx-bg1, -fx-bg1, -fx-bg1, -fx-bg1;
@@ -31,7 +34,7 @@
 }
 
 .tool-bar {
-	-fx-background-color: -fx-bg0, -fx-bg0, -fx-bg0, -fx-bg0; 
+	-fx-background-color: -fx-bg0, -fx-bg0, -fx-bg0, -fx-bg0;
 }
 
 .menu-bar {
@@ -70,6 +73,9 @@
 
 #Planet{
 	-fx-fill: #b8bb26;
+	-fx-stroke-width: 0;
+	-fx-stroke: -fx-planet-h;
+
 }
 
 #bg {
@@ -136,4 +142,3 @@
 
 }
 /* https://stackoverflow.com/questions/21451386/titled-pane-csssettings
-

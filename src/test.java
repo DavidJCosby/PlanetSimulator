@@ -69,7 +69,7 @@ public class test extends Application {
 		
 		Scheduler epic = Bridge.getScheduler();
 		Task task = new RenderTask(1);
-		epic.scheduleRegularTask("Render", task, 144);
+		epic.scheduleRegularTask("Render", task, 90);
 	}
 	
 	@Override

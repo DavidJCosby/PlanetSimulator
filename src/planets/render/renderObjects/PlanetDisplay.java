@@ -3,6 +3,7 @@ package planets.render.renderObjects;
 import vector.Vector;
 
 import javafx.scene.shape.Circle;
+import bridge.Bridge;
 import javafx.scene.paint.*;
 
 /**
@@ -18,6 +19,7 @@ public class PlanetDisplay extends Circle {
 		this.ID = ID;
 		this.setId("Planet");
 		createSelf();
+		connectMouseEvents();
 	}
 	
 	public void setPosition(Vector newPosition) {
@@ -38,9 +40,16 @@ public class PlanetDisplay extends Circle {
 	}
 	
 	private void createSelf() {
-		//this.setStroke(Color.web("#859900")); // TODO: replace with CSS
+	//	this.setStroke(Color.web("#ffffff")); // TODO: replace with CSS
 		//this.setFill(Color.web("#859900"));
 		this.toBack();
+	}
+	
+	private void connectMouseEvents() {
+		setOnMousePressed((event) -> {
+			System.out.println("clicked " + this.ID);
+			Bridge.getProjectData().setSelection(Bridge.getProjectData().getPlanets().getPlanetById(this.ID));
+		});
 	}
 	
 	private void updatePosition() {
