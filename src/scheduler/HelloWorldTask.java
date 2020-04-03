@@ -1,13 +1,15 @@
 package scheduler;
 
-public class HelloWorldTask extends Task {
+import bridge.Bridge;
+
+public class HelloWorldTask extends SchedulerTask {
 	
-	public HelloWorldTask(int maxTardiness) {
-		super(maxTardiness);
+	public HelloWorldTask(double frequency) {
+		super(frequency);
 	}
 	
 	@Override
 	public void performTask() {
-		System.out.println("Hello World");
+		System.out.println("Hello world");
 	}
 }

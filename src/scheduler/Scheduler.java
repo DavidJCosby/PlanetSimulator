@@ -1,31 +1,25 @@
 package scheduler;
 
 import java.util.*;
-
+import java.util.concurrent.*;
 
 public class Scheduler {
-	private HashMap<String, TaskData> tasks = new HashMap<String, TaskData>();
-	
-	Timer timer = new Timer();
+	ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
 	
 	public Scheduler() {
 		
 	}
 	
-	private void startRunningTask(TaskData taskData) {
-		int period = (int)(1000 / taskData.getFrequency());
-		timer.scheduleAtFixedRate(taskData.getTask(), 0, period);
+	
+	
+	public void start(Runnable task, double frequency) {
+		int period = (int)(1e6 / frequency);
+		System.out.println(period);
+		executor.scheduleAtFixedRate(task, 1000000, period, TimeUnit.MICROSECONDS);
 	}
 	
-	public void scheduleRegularTask(String name, Task task, double frequency) {
-		TaskData taskData = new TaskData(name, task, frequency);
-		tasks.put(name, taskData);
-		startRunningTask(taskData);
-	}
 	
 	public void stop() {
-		timer.cancel();
-		timer.purge();
+		executor.shutdown();
 	}
-	
 }

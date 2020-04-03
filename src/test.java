@@ -11,6 +11,8 @@ import vector.Vector;
 import bridge.Bridge;
 import window.*;
 
+import java.util.concurrent.*;
+
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -47,7 +49,7 @@ public class test extends Application {
 	}
 	
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage primaryStage) throws InterruptedException {
 		setupBridge();
 		Bridge.getWindowManager().showProjectWindow();
 		setStyle("gruvbox");
@@ -67,9 +69,19 @@ public class test extends Application {
 		Bridge.getPlanetManager().registerPlanet(p2);
 
 		
-		Scheduler epic = Bridge.getScheduler();
-		Task task = new RenderTask(1);
-		epic.scheduleRegularTask("Render", task, 90);
+		Runnable renderTask = () -> {
+			try {
+				Bridge.getPhysicsEngine().calculate();
+				Bridge.getRenderer().render();
+			}
+			catch (Exception e) {
+				System.out.print("error");
+			}
+		};
+		
+		Scheduler scheduler = Bridge.getScheduler();
+		
+		scheduler.start(renderTask, 90);
 	}
 	
 	@Override

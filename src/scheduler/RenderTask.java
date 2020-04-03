@@ -2,10 +2,10 @@ package scheduler;
 
 import bridge.Bridge;
 
-public class RenderTask extends Task {
+public class RenderTask extends SchedulerTask {
 	
-	public RenderTask(int maxTardiness) {
-		super(maxTardiness);
+	public RenderTask(double frequency) {
+		super(frequency);
 	}
 	
 	@Override
