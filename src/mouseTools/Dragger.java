@@ -48,6 +48,11 @@ public class Dragger extends MouseTool {
 	
 	public void onMouseUp(MouseEvent e) {
 		if (isPanEvent(e)) {
+			if (e.getTarget().equals(simulationPane)) {
+				if (lastPos.sub(initPos).magnitude() < 10) {
+					Bridge.getProjectData().setSelection(null);
+				}
+			}
 			updateLastPosWithEventInfo(e);
 		}
 	}

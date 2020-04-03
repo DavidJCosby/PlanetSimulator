@@ -37,7 +37,7 @@ public class Renderer {
 	
 	private void selectionFlash(PlanetDisplay planetDisplay) {
 		double now = (double)System.currentTimeMillis();
-		double multiplier = Math.sin(now / 250) / 2 + 0.5;
+		double multiplier = Math.sin(now / 200) / 2 + 1.5;
 		planetDisplay.setStrokeWidth(multiplier * 4);
 	}
 	
