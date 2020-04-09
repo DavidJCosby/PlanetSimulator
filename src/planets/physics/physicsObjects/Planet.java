@@ -36,7 +36,7 @@ public class Planet extends NewtonianObject {
 	
 	private void establishIdentity() {
 		ID = planetsEverCreated + 1;
-		name = "Planet";
+		name = "Planet" + ID;
 		planetsEverCreated++;
 	}
 	

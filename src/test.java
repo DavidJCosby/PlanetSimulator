@@ -56,12 +56,14 @@ public class test extends Application {
 
 	
 		Planet p1 = new Planet();
+		p1.setName("Earth");
 		p1.setPosition(new Vector(0, 0));
 		p1.setMass(5.972e24);
 		p1.setDensity(5.51);
 		Bridge.getPlanetManager().registerPlanet(p1);
 		
 		Planet p2 = new Planet();
+		p2.setName("Moon");
 		p2.setPosition(new Vector(384400, 0));
 		p2.setMass(7.348e22);
 		p2.setVelocity(new Vector(0, -1.07));
