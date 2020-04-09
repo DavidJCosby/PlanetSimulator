@@ -5,6 +5,10 @@ import planets.physics.physicsObjects.Planet;
 import planets.render.renderObjects.*;
 
 
+/**
+ * In charge of registering planets.
+ * @author David Cosby
+ */
 public class PlanetManager {
 	
 	public PlanetManager() {

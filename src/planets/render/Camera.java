@@ -72,10 +72,18 @@ public class Camera {
 	}
 	
 	
+	/**
+	 * @param pixelDisplacement (pixels, pixels)
+	 * @return kilometerVector - pixelDisplacement cast to kilometer-scale vector using the zoom factor
+	 */
 	public Vector getVectorDisplacementFromPixelDisplacement(Vector pixelDisplacement) {
 		return pixelDisplacement.div(pixelsPerKilometer);
 	}
 	
+	/**
+	 * @param pixelLength (pixels)
+	 * @return VectorLength - PixelLength cast to kilometers using the zoom factor
+	 */
 	public double getVectorLengthFromPixelLength(double pixelLength) {
 		return pixelLength / pixelsPerKilometer;
 	}

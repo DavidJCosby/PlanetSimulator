@@ -7,6 +7,10 @@ import bridge.Bridge;
 import projectData.*;
 import ui.SimulationPane;
 
+/**
+ * Dragger MouseTool in charge of camera movement and planet selection.
+ * @author David Cosby
+ */
 
 public class Dragger extends MouseTool {
 	private Vector initPos;
@@ -22,18 +26,30 @@ public class Dragger extends MouseTool {
 
 	}
 	
+	/**
+	 * @param m MouseEvent to be tested
+	 * @return boolean indicating whether the mouse event had the pan button down.
+	 */
 	private boolean isPanEvent(MouseEvent m) {
 		return m.getButton().equals(panButton);
 	}
 	
+	
+
 	private void updateLastPosWithEventInfo(MouseEvent e) {
 		lastPos = new Vector(e.getX(), e.getY());
 	}
 	
+	/**
+	 * @return Vector with dimensions equal to the SimulationPane's Width and Height.
+	 */
 	private Vector getScreenSize() {
 		return new Vector(simulationPane.getWidth(), simulationPane.getHeight());
 	}
 	
+	/**
+	 * @return Vector representing the SimulationPane's center position.
+	 */
 	private Vector getScreenCenter() {
 		return getScreenSize().mul(0.5);
 	}

@@ -6,6 +6,10 @@ import planets.physics.physicsObjects.*;
 import vector.Vector;
 
 
+/**
+ * Updates the position and velocity of Planets
+ * @author David Cosby
+ */
 public class PhysicsEngine {
 	long lastUpdate = System.currentTimeMillis();
 	PhysicsSettings settings = Bridge.getProjectData().getSettings().getPhysicsSettings();
@@ -15,6 +19,9 @@ public class PhysicsEngine {
 		
 	}
 	
+	/**
+	 * @return Seconds since last update
+	 */
 	private double getDeltaSeconds() {
 		long now = System.currentTimeMillis();
 		return ((double)(now-lastUpdate) / 1000.0) * settings.getSimulationSpeedScale();
@@ -31,7 +38,6 @@ public class PhysicsEngine {
 		
 		if (settings.getPlaying() == true) {
 			
-		
 			PlanetContainer planets = Bridge.getProjectData().getPlanets();
 			int numPlanets = planets.getNumberOfPlanets();
 			double deltaSeconds = getDeltaSeconds();
@@ -46,8 +52,10 @@ public class PhysicsEngine {
 						Gravity.gravitateATowardsB(p, p2, deltaSeconds);
 					}
 				}
-			}	
+			}
+			
 		}
+		
 		lastUpdate = System.currentTimeMillis();
 	}
 }
