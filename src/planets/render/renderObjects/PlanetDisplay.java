@@ -2,6 +2,7 @@ package planets.render.renderObjects;
 
 import vector.Vector;
 
+import planets.physics.physicsObjects.*;
 import javafx.scene.shape.Circle;
 import bridge.Bridge;
 import javafx.scene.paint.*;
@@ -48,7 +49,9 @@ public class PlanetDisplay extends Circle {
 	private void connectMouseEvents() {
 		setOnMousePressed((event) -> {
 			System.out.println("clicked " + this.ID);
-			Bridge.getProjectData().setSelection(Bridge.getProjectData().getPlanets().getPlanetById(this.ID));
+			Planet p = Bridge.getProjectData().getPlanets().getPlanetById(this.ID);
+			Bridge.getProjectData().setSelection(p);
+			Bridge.getWindowManager().getProjectWindow().getPropertiesPane().getController().selectedPlanet(p);
 		});
 	}
 	

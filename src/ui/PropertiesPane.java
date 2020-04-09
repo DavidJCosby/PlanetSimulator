@@ -6,9 +6,10 @@ import ui.drawer.*;
 
 public class PropertiesPane extends Pane {
 	VBox drawer = new VBox();
-	Drawer data = new DataDrawer();
-	Drawer physics = new PhysicsDrawer();
-	Drawer render = new RenderDrawer();
+	DataDrawer data = new DataDrawer();
+	PhysicsDrawer physics = new PhysicsDrawer();
+	RenderDrawer render = new RenderDrawer();
+	DrawerController controller = new DrawerController();
 
 	
 	public PropertiesPane() {
@@ -30,6 +31,22 @@ public class PropertiesPane extends Pane {
 		
 		drawer.getChildren().addAll(data, physics, render);
 		getChildren().add(drawer);
+	}
+	
+	public DataDrawer getDataDrawer() {
+		return data;
+	}
+	
+	public PhysicsDrawer getPhysicsDrawer() {
+		return physics;
+	}
+	
+	public RenderDrawer getRenderDrawer() {
+		return render;
+	}
+	
+	public DrawerController getController() {
+		return controller;
 	}
 
 }

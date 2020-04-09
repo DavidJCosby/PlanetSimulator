@@ -62,5 +62,8 @@ public class ProjectWindow extends Window {
 		return simulationPane;
 	}
 	
+	public PropertiesPane getPropertiesPane() {
+		return propertiesPane;
+	}
 	
 }

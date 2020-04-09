@@ -1,5 +1,7 @@
 package projectData;
 
+import bridge.Bridge;
+
 /**
  * Settings specific to the Physics Engine.
  * @author David Cosby
@@ -54,6 +56,8 @@ public class PhysicsSettings {
 	
 	public void setPlaying(boolean newPlaying) {
 		playing = newPlaying;
+		Bridge.getWindowManager().getProjectWindow().getPropertiesPane().getController().setOpenForChanges(!newPlaying);
+
 	}
 
 	

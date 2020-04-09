@@ -51,6 +51,8 @@ public class Dragger extends MouseTool {
 			if (e.getTarget().equals(simulationPane)) {
 				if (lastPos.sub(initPos).magnitude() < 10) {
 					Bridge.getProjectData().setSelection(null);
+					Bridge.getWindowManager().getProjectWindow().getPropertiesPane().getController().deselectedPlanet();
+
 				}
 			}
 			updateLastPosWithEventInfo(e);
