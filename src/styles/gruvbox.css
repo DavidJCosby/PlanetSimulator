@@ -157,7 +157,7 @@
 .text-field {
 	-fx-padding: 0.25em 2em 0.05em 0.2em;
 	-fx-background-color: -fx-bg1;
-	-fx-text-fill: -fx-fg2;
+	-fx-text-fill: -fx-fg1;
 }
 
 .text-field:readonly {

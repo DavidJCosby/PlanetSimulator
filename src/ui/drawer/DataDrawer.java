@@ -53,10 +53,11 @@ public class DataDrawer extends Drawer {
 		densitySection.getStyleClass().add("section");
 		densitySection.getChildren().addAll(densityLabel, density, densityUnit);
 		
-		sections.getChildren().addAll(nameSection, massSection, radiusSection, densitySection);
+		sections.getChildren().addAll(nameSection, massSection, densitySection, radiusSection);
 		getContent().getChildren().addAll(sections);
 
 	}
+	
 	
 	public void setNameTo(String newName) {
 		name.setText(newName);
@@ -77,8 +78,10 @@ public class DataDrawer extends Drawer {
 	public void setOpenForChanges(boolean open) {
 		name.setEditable(open);
 		mass.setEditable(open);
-		radius.setEditable(open);
+		radius.setEditable(false);
 		density.setEditable(open);
 	}
-
+	
+	
 }
+
