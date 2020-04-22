@@ -9,6 +9,7 @@ import planets.render.*;
 import planets.render.renderObjects.*;
 import vector.Vector;
 import bridge.Bridge;
+import bridge.Tools;
 import window.*;
 
 import java.util.concurrent.*;
@@ -37,8 +38,8 @@ public class test extends Application {
 		PlanetManager planetManager = new PlanetManager();
 		Bridge.setPlanetManager(planetManager);
 		
-		data.setCurrentTool(new Dragger());
-
+		Bridge.getProjectData().setCurrentTool(Tools.DRAG);
+		windowManager.getProjectWindow().getPropertiesPane().getController().selectedPlanet(Tools.CREATE.getDefaultPlanet());
 		
 	}
 	

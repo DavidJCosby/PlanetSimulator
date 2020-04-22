@@ -16,6 +16,7 @@ import window.WindowManager;
  */
 public class Renderer {
 	private PlanetDisplayContainer planetDisplayContainer = new PlanetDisplayContainer();
+	private PlanetPreview planetPreview = new PlanetPreview(); 
 	private SimulationPane simulationPane;
 	
 	
@@ -25,6 +26,7 @@ public class Renderer {
 	
 	public void setSimulationPane(SimulationPane newSimulationPane) {
 		simulationPane = newSimulationPane;
+		simulationPane.getChildren().add(planetPreview);
 	}
 	
 	public SimulationPane getSimulationPane() {
@@ -33,6 +35,10 @@ public class Renderer {
 	
 	public PlanetDisplayContainer getPlanetDisplayContainer() {
 		return planetDisplayContainer;
+	}
+	
+	public PlanetPreview getPlanetPreview() {
+		return planetPreview;
 	}
 	
 	private void selectionFlash(PlanetDisplay planetDisplay) {

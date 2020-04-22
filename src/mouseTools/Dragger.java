@@ -3,7 +3,7 @@ package mouseTools;
 import javafx.scene.input.*;
 import vector.Vector;
 import planets.render.Camera;
-import bridge.Bridge;
+import bridge.*;
 import projectData.*;
 import ui.SimulationPane;
 
@@ -20,6 +20,7 @@ public class Dragger extends MouseTool {
 	private ControlSettings controls = Bridge.getProjectData().getSettings().getControlSettings();
 	private MouseButton panButton = controls.getMouseButtonForEvent("CameraPan");
 	private SimulationPane simulationPane = Bridge.getRenderer().getSimulationPane();
+	private Creator creator = Tools.CREATE;
 
 	
 	public Dragger() {
@@ -67,7 +68,8 @@ public class Dragger extends MouseTool {
 			if (e.getTarget().equals(simulationPane)) {
 				if (lastPos.sub(initPos).magnitude() < 10) {
 					Bridge.getProjectData().setSelection(null);
-					Bridge.getWindowManager().getProjectWindow().getPropertiesPane().getController().deselectedPlanet();
+					
+					Bridge.getWindowManager().getProjectWindow().getPropertiesPane().getController().selectedPlanet(Tools.CREATE.getDefaultPlanet());
 
 				}
 			}
@@ -99,8 +101,17 @@ public class Dragger extends MouseTool {
 		Vector mousePosition = new Vector(e.getX(), e.getY());
 		
 		zoom(zoomFactor, mousePosition);
+	}
+	
+	public void onEquip() {
 		
 	}
+	
+	public void onUnequip() {
+		
+	}
+	
+	
 	
 	private void zoom(double deltaRatio, Vector zoomCenter) {
 		//Vector screenSize = getScreenSize();
@@ -125,9 +136,7 @@ public class Dragger extends MouseTool {
 		
 		camera.setOffset(camera.getOffset().add(offset));
 
-
 	}
-	
 	
 
 	

@@ -3,8 +3,9 @@ package ui.drawer;
 import planets.physics.physicsObjects.Planet;
 import ui.SimulationPane;
 import bridge.Bridge;
+import bridge.Tools;
 import javafx.scene.input.*;
-
+import bridge.*;
 
 public class DrawerController {
 
@@ -14,6 +15,7 @@ public class DrawerController {
 	
 	
 	public DrawerController() {
+		
 	}
 	
 	private boolean isSubmitKey(KeyEvent e) {

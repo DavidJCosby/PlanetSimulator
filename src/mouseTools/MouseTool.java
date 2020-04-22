@@ -16,5 +16,7 @@ public abstract class MouseTool {
 	public abstract void onMouseUp(MouseEvent e);
 	public abstract void onMouseMove(MouseEvent e);
 	public abstract void onScroll(ScrollEvent e);
+	public abstract void onEquip();
+	public abstract void onUnequip();
 	
 }

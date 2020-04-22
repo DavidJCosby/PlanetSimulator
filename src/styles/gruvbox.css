@@ -169,3 +169,13 @@
 	-fx-padding: 0.5em 1em 0em 0.75em;
 	fx-background-color: #000000;
 }
+
+
+#preview {
+	-fx-fill: transparent;
+	    -fx-stroke: -fx-fg1;
+	    -fx-stroke-width: 3;
+	    -fx-stroke-dash-array: 6 6 6 6;
+	    -fx-stroke-dash-offset: 12;
+	    -fx-stroke-line-cap: round;
+}

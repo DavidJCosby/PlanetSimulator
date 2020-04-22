@@ -1,5 +1,7 @@
 package ui;
 
+import bridge.Bridge;
+import bridge.Tools;
 import javafx.scene.control.*;
 
 public class Toolbar extends ToolBar {
@@ -12,6 +14,7 @@ public class Toolbar extends ToolBar {
 	
 	public Toolbar() {
 		build();
+		setupUserInput();
 	}
 	
 	private void build() {
@@ -25,7 +28,21 @@ public class Toolbar extends ToolBar {
 		delete.setToggleGroup(mouseTools);
 		getItems().addAll(pan, create, delete);
 		
+	}
+	
+	private void setupUserInput() {
+		pan.setOnAction((e) -> {
+			Bridge.getProjectData().getCurrentTool().onUnequip();
+			Bridge.getProjectData().setCurrentTool(Tools.DRAG);
+			Tools.DRAG.onEquip();
+		});
 		
+		create.setOnAction((e) -> {
+			Bridge.getProjectData().getCurrentTool().onUnequip();
+			Bridge.getProjectData().setCurrentTool(Tools.CREATE);
+			Tools.CREATE.onEquip();
+
+		});
 	}
 	
 }

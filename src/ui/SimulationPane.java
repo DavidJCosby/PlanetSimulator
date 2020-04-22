@@ -6,6 +6,7 @@ import javafx.scene.Group;
 import javafx.scene.shape.Rectangle;
 import planets.render.renderObjects.PlanetDisplay;
 import projectData.ProjectData;
+import mouseTools.*;
 
 
 public class SimulationPane extends Pane {
@@ -44,7 +45,15 @@ public class SimulationPane extends Pane {
 		});
 		
 		setOnMouseDragged((event) -> {
-			data.getCurrentTool().onMouseMove(event);
+			if (data.getCurrentTool() instanceof Dragger ) {
+				data.getCurrentTool().onMouseMove(event);
+			}
+		});
+		
+		setOnMouseMoved((event) -> {
+			if (data.getCurrentTool() instanceof Creator ) {
+				data.getCurrentTool().onMouseMove(event);
+			}
 		});
 		
 		setOnScroll((event) -> {
