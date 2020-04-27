@@ -1,6 +1,7 @@
 package ui.drawer;
 
 import planets.physics.physicsObjects.Planet;
+import vector.Vector;
 import ui.SimulationPane;
 import bridge.Bridge;
 import bridge.Tools;
@@ -62,7 +63,58 @@ public class DrawerController {
 		});
 		
 
+		data.x.setOnKeyPressed((e) -> {
+			if (isSubmitKey(e) && data.name.isEditable()) {
+				try {
+					double xAsDouble = Double.parseDouble(data.x.getText());
+					currentPlanet.setPosition(new Vector(xAsDouble, currentPlanet.getPosition().getY()));
+				}
+				catch (Exception ex) {
+					data.setPositionTo(currentPlanet.getPosition());
+				}
+				data.requestFocus();
+			}
+		});
 		
+		data.y.setOnKeyPressed((e) -> {
+			if (isSubmitKey(e) && data.name.isEditable()) {
+				try {
+					double yAsDouble = Double.parseDouble(data.y.getText());
+					currentPlanet.setPosition(new Vector(currentPlanet.getPosition().getX(), yAsDouble));
+				}
+				catch (Exception ex) {
+					data.setPositionTo(currentPlanet.getPosition());
+				}
+				data.requestFocus();
+			}
+		});
+		
+		data.vx.setOnKeyPressed((e) -> {
+			if (isSubmitKey(e) && data.name.isEditable()) {
+				try {
+					double vxAsDouble = Double.parseDouble(data.vx.getText());
+					currentPlanet.setVelocity(new Vector(vxAsDouble, currentPlanet.getVelocity().getY()));
+				}
+				catch (Exception ex) {
+					data.setVelocityTo(currentPlanet.getVelocity());
+				}
+				data.requestFocus();
+			}
+		});
+		
+		data.vy.setOnKeyPressed((e) -> {
+			if (isSubmitKey(e) && data.name.isEditable()) {
+				try {
+					double vyAsDouble = Double.parseDouble(data.vy.getText());
+					currentPlanet.setVelocity(new Vector(currentPlanet.getVelocity().getX(), vyAsDouble));
+
+				}
+				catch (Exception ex) {
+					data.setVelocityTo(currentPlanet.getVelocity());
+				}
+				data.requestFocus();
+			}
+		});
 	}
 	
 	public void selectedPlanet(Planet p) {
@@ -96,16 +148,19 @@ public class DrawerController {
 		data.setMassTo(currentPlanet.getMass());
 		data.setRadiusTo(currentPlanet.getRadius());
 		data.setDensityTo(currentPlanet.getDensity());
+		data.setPositionTo(currentPlanet.getPosition());
+		data.setVelocityTo(currentPlanet.getVelocity());
+
 	}
 	
 	public void setOpenForChanges(boolean open) {
 		if (currentPlanet != null) {
 			data.setOpenForChanges(open);
+			data.setVelocityTo(currentPlanet.getVelocity());
+			data.setPositionTo(currentPlanet.getPosition());
+
 		}
 	}
-	
-	public void updateRealtimePlanetInformation() {
-		
-	}
+
 	
 }

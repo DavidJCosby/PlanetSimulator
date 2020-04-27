@@ -54,6 +54,7 @@ public class Renderer {
 		PlanetContainer planetContainer = projectData.getPlanets();
 		Vector screenCenter = new Vector(simulationPane.getWidth(), simulationPane.getHeight()).mul(0.5);
 		
+		
 		int loopSize = planetContainer.getNumberOfPlanets();
 		for (int i = 0; i < loopSize; i++) {
 			PlanetDisplay planetDisplay = planetDisplayContainer.getPlanetDisplayByIndex(i);
@@ -67,6 +68,9 @@ public class Renderer {
 			planetDisplay.setPosition(screenCenter.add(camera.getScreenDisplacementFromCenter(planet.getPosition())));
 			planetDisplay.setRadius(camera.getScreenPixelLength(planet.getRadius()));
 		}
+		
+	
+
 	}
 	
 }
