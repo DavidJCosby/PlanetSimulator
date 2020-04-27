@@ -15,6 +15,10 @@ public class PlanetManager {
 		
 	}
 	
+	/**
+	 * Takes a Planet object and registers it to the simulation by creating a PlanetDisplay and adding the planet to lists that will be used for physics calculations and rendering.
+	 * @param p
+	 */
 	public void registerPlanet(Planet p) {
 		Bridge.getProjectData().getPlanets().addPlanet(p);
 		PlanetDisplay planetDisplay = new PlanetDisplay(p.getID());

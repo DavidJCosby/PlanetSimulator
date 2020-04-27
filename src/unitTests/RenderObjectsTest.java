@@ -77,6 +77,17 @@ class RenderObjectsTest {
 	}
 	
 	@Test
+	void testPlanetPreview() {
+		PlanetPreview pPrev = new PlanetPreview();
+		Vector newPos = new Vector(60, -2);
+		pPrev.setPosition(newPos);
+		assertEquals(60, pPrev.getCenterX());
+		assertEquals(-2, pPrev.getCenterY());
+
+
+	}
+	
+	@Test
 	void testClip() { // just kinda bugging me in the coverage chart, sorry.
 		SimulationPane simPane = new SimulationPane();
 		simPane.resize(1234, 567);

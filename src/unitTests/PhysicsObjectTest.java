@@ -4,8 +4,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import bridge.Bridge;
+import bridge.Tools;
+import planets.physics.PhysicsEngine;
 import planets.physics.physicsObjects.*;
+import planets.render.Renderer;
+import projectData.ProjectData;
+import scheduler.Scheduler;
+import planets.PlanetManager;
+
 import vector.Vector;
+import window.WindowManager;
 
 class PhysicsObjectTest {
 
@@ -99,6 +108,28 @@ class PhysicsObjectTest {
 		c.addPlanet(p);
 		assertSame(c.getPlanetByIndex(0), c.getPlanetById(p.getID()));
 		assertEquals(1, c.getNumberOfPlanets());
+	}
+	
+	@Test
+	void testBridge() {
+		// just run some setup code to see if it works, only way I can think of to test it.
+		ProjectData data = new ProjectData();
+		Bridge.setProjectData(data);
 		
+		Renderer renderer = new Renderer();
+		Bridge.setRenderer(renderer);
+
+		Scheduler scheduler = new Scheduler();
+		Bridge.setScheduler(scheduler);
+		
+		PhysicsEngine physicsEngine = new PhysicsEngine();
+		Bridge.setPhysicsEngine(physicsEngine);
+		
+		PlanetManager planetManager = new PlanetManager();
+		Bridge.setPlanetManager(planetManager);
+		
+		Bridge.getProjectData().setCurrentTool(Tools.DRAG);
+		
+		// no way to test the PlanetManager.
 	}
 }
