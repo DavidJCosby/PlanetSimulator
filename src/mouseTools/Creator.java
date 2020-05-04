@@ -79,6 +79,8 @@ public class Creator extends MouseTool {
 	
 	public void onEquip() {
 		planetPreview.setVisible(true);
+		Bridge.getProjectData().setSelection(null);
+		Bridge.getWindowManager().getProjectWindow().getPropertiesPane().getController().selectedPlanet(defaultPlanet);
 	}
 	
 	public void onUnequip() {

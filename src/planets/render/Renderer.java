@@ -60,16 +60,16 @@ public class Renderer {
 			PlanetDisplay planetDisplay = planetDisplayContainer.getPlanetDisplayByIndex(i);
 			planetDisplay.setStrokeWidth(0); // hacky default
 			if (projectData.getSelection() != null) {
-				if (projectData.getSelection().getID() == planetDisplay.getID()) {
+				if (projectData.getSelection().getID() == (planetDisplay.getID())) {
 					selectionFlash(planetDisplay);
 				}
 			}
 			Planet planet = planetContainer.getPlanetByIndex(i);
-			planetDisplay.setPosition(screenCenter.add(camera.getScreenDisplacementFromCenter(planet.getPosition())));
-			planetDisplay.setRadius(camera.getScreenPixelLength(planet.getRadius()));
+			if (planet.getDeleted() == false) {
+				planetDisplay.setPosition(screenCenter.add(camera.getScreenDisplacementFromCenter(planet.getPosition())));
+				planetDisplay.setRadius(camera.getScreenPixelLength(planet.getRadius()));
+			}
 		}
-		
-	
 
 	}
 	

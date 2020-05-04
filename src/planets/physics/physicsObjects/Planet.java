@@ -18,6 +18,8 @@ public class Planet extends NewtonianObject {
 	private String name;
 	private static int planetsEverCreated;
 	
+	private boolean deleted = false;
+	
 	public Planet() {
 		super();
 		establishIdentity();
@@ -80,6 +82,18 @@ public class Planet extends NewtonianObject {
 	*/
 	public double getRadius() {
 		return Math.cbrt((3.0 * getVolume()) / (4.0 * Math.PI)) ;
+	}
+	
+	/**
+	 * When true, the renderer and physics engine will skip over this planet. Ugly and wrong, I know.
+	 * @param del 
+	 */
+	public void setDeleted(boolean del) {
+		deleted = del;
+	}
+	
+	public boolean getDeleted() {
+		return deleted;
 	}
 	
 }

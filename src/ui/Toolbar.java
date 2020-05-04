@@ -41,6 +41,12 @@ public class Toolbar extends ToolBar {
 			Bridge.getProjectData().getCurrentTool().onUnequip();
 			Bridge.getProjectData().setCurrentTool(Tools.CREATE);
 			Tools.CREATE.onEquip();
+		});
+		
+		delete.setOnAction((e)-> {
+			Bridge.getProjectData().getCurrentTool().onUnequip();
+			Bridge.getProjectData().setCurrentTool(Tools.DELETE);
+			Tools.DELETE.onEquip();
 
 		});
 	}

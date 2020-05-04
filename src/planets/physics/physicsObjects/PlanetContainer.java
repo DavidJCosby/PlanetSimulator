@@ -8,6 +8,8 @@ import java.util.HashMap;
  * @author David Cosby
  */
 public class PlanetContainer {
+	
+	
 	/**
 	 * List of Planets in order of registration. Use, paired with getNumberOfPlanets(), when you need to loop through a list.
 	 */
@@ -48,10 +50,30 @@ public class PlanetContainer {
 	
 	
 	/**
+	 * Removes the planet from the registry. Hopefully java has garbage collection that will clean this up?
+	 * @param ID identifier of the requested planet
+	 */
+	public void removePlanetById(int ID) {
+		int counter = 0;
+		
+		for (Planet p : planets) {
+			if (p.getID() == ID ) {
+				break;
+			}
+			counter++;
+		}
+		
+		planets.remove(counter);
+	}
+	
+	
+	/**
 	 * @return number of planets registered in the PlanetContainer
 	 */
 	public int getNumberOfPlanets() {
 		return planets.size();
 	}
+	
+
 	
 }

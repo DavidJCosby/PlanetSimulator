@@ -7,8 +7,7 @@ import java.util.HashMap;
  * @author David Cosby
  * Contains all of the PlanetDisplays in a simulation.
  */
-public class PlanetDisplayContainer {
-	
+public class PlanetDisplayContainer {	
 	private ArrayList<PlanetDisplay> planetDisplays = new ArrayList<PlanetDisplay>();
 	
 	private HashMap<Integer, PlanetDisplay> planetDisplaysByID = new HashMap<Integer, PlanetDisplay>();
@@ -45,5 +44,6 @@ public class PlanetDisplayContainer {
 	public int getNumberOfPlanetDisplays() {
 		return planetDisplays.size();
 	}
+	
 	
 }

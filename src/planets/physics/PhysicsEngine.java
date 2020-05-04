@@ -44,6 +44,9 @@ public class PhysicsEngine {
 			
 			for (int i = 0; i < numPlanets; i++) {
 				Planet p = planets.getPlanetByIndex(i);
+				if (p.getDeleted() == true) {
+					continue;
+				}
 				updatePosition(p, deltaSeconds);
 				
 				for (int i2 = 0; i2 < numPlanets; i2++) {

@@ -3,6 +3,7 @@ package planets;
 import bridge.Bridge;
 import planets.physics.physicsObjects.Planet;
 import planets.render.renderObjects.*;
+import ui.SimulationPane;
 
 
 /**
@@ -26,4 +27,12 @@ public class PlanetManager {
 		Bridge.getRenderer().getSimulationPane().addPlanetDisplay(planetDisplay);
 	}
 	
+	public void removePlanetById(int id) { // this is going to be really ugly, but the alternative was actually worse.
+		Planet p = Bridge.getProjectData().getPlanets().getPlanetById(id);
+		p.setDeleted(true);
+		SimulationPane simp = Bridge.getRenderer().getSimulationPane();
+		PlanetDisplay pd = Bridge.getRenderer().getPlanetDisplayContainer().getPlanetDisplayByID(id);
+		simp.getChildren().remove(pd);
+		pd.setVisible(false);
+	}
 }

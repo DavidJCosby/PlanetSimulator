@@ -49,8 +49,10 @@ public class PlanetDisplay extends Circle {
 	private void connectMouseEvents() {
 		setOnMousePressed((event) -> {
 			Planet p = Bridge.getProjectData().getPlanets().getPlanetById(this.ID);
-			Bridge.getProjectData().setSelection(p);
-			Bridge.getWindowManager().getProjectWindow().getPropertiesPane().getController().selectedPlanet(p);
+			if (p != null) {
+				Bridge.getProjectData().setSelection(p);
+				Bridge.getWindowManager().getProjectWindow().getPropertiesPane().getController().selectedPlanet(p);
+			}
 		});
 	}
 	

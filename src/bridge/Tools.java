@@ -6,5 +6,5 @@ import mouseTools.*;
 public class Tools {
 	public static Dragger DRAG = new Dragger();
 	public static Creator CREATE = new Creator();
-	public static Object DELETE = null;
+	public static Deleter DELETE = new Deleter();
 	}
