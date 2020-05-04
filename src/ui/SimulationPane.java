@@ -9,6 +9,10 @@ import projectData.ProjectData;
 import mouseTools.*;
 
 
+/**
+ * Pane that holds PlanetDisplays and listens for MouseEvents to be routed to MouseTools.
+ * @author David Cosby
+ */
 public class SimulationPane extends Pane {
 	private Group planetDisplays = new Group();
 	private Rectangle clip = new Rectangle();

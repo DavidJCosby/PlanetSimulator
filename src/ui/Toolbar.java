@@ -4,6 +4,10 @@ import bridge.Bridge;
 import bridge.Tools;
 import javafx.scene.control.*;
 
+/**
+ * Lets the user equip MouseTools.
+ * @author David Cosby
+ */
 public class Toolbar extends ToolBar {
 	ToggleButton pan = new ToggleButton("Pan");
 	ToggleButton create = new ToggleButton("Create");
@@ -47,7 +51,6 @@ public class Toolbar extends ToolBar {
 			Bridge.getProjectData().getCurrentTool().onUnequip();
 			Bridge.getProjectData().setCurrentTool(Tools.DELETE);
 			Tools.DELETE.onEquip();
-
 		});
 	}
 	

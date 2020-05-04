@@ -10,6 +10,10 @@ import vector.Vector;
 import planets.render.Camera;
 import planets.render.renderObjects.*;
 
+/**
+ * Deleter MouseTool in charge of deleting planets when they are clicked on.
+ * @author David Cosby
+ */
 public class Deleter extends MouseTool {
 	
 	private Vector lastPos;

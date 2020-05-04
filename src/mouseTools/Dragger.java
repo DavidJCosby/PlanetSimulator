@@ -31,12 +31,14 @@ public class Dragger extends MouseTool {
 	 * @param m MouseEvent to be tested
 	 * @return boolean indicating whether the mouse event had the pan button down.
 	 */
+	/**
+	 * @param m MouseEvent to be checked
+	 * @return boolean indicating whether the event should be used for panning by checking which mouse button was down.
+	 */
 	private boolean isPanEvent(MouseEvent m) {
 		return m.getButton().equals(panButton);
 	}
 	
-	
-
 	private void updateLastPosWithEventInfo(MouseEvent e) {
 		lastPos = new Vector(e.getX(), e.getY());
 	}
@@ -82,10 +84,7 @@ public class Dragger extends MouseTool {
 			Vector currentPos = new Vector(e.getX(), e.getY());
 			Vector delta = lastPos.sub(currentPos);
 			delta = camera.getVectorDisplacementFromPixelDisplacement(delta);
-
-			pan(delta);
-			//camera.setOffset(camera.getOffset().add(newOffset));
-			
+			pan(delta);			
 			updateLastPosWithEventInfo(e);
 		}
 	}
@@ -112,15 +111,11 @@ public class Dragger extends MouseTool {
 	}
 	
 	
-	
 	private void zoom(double deltaRatio, Vector zoomCenter) {
-		//Vector screenSize = getScreenSize();
-		
 		zoomCenter = camera.getVectorDisplacementFromPixelDisplacement(zoomCenter);
 		Vector screenCenter = getScreenCenter();
 		
 		screenCenter = camera.getVectorDisplacementFromPixelDisplacement(screenCenter);
-
 		
 		double zoomBefore = camera.getZoom();
 		double newZoom = zoomBefore * deltaRatio;
@@ -133,11 +128,8 @@ public class Dragger extends MouseTool {
 		
 		Vector offset = zoomCenterRelative.sub(previousRelative).div(newZoom);
 
-		
 		camera.setOffset(camera.getOffset().add(offset));
-
 	}
-	
 
 	
 }

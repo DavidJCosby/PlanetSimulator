@@ -10,6 +10,10 @@ import vector.Vector;
 import planets.render.Camera;
 import planets.render.renderObjects.PlanetPreview;
 
+/**
+ * Creator MouseTool in charge of creating new planets with properties matching the defaultPlanet.
+ * @author David Cosby
+ */
 public class Creator extends MouseTool {
 	
 	private PlanetPreview planetPreview = Bridge.getRenderer().getPlanetPreview();
@@ -23,6 +27,10 @@ public class Creator extends MouseTool {
 	}
 	
 	
+	/**
+	 * @param e MouseEvent for information about the mouse's position
+	 * @return Vector indicating the position of the mouse in kilometer-scale world space.
+	 */
 	private Vector mouseToWorldPos(MouseEvent e) {
 		Vector screenPos = new Vector(e.getX(), e.getY());
 		SimulationPane simPane = Bridge.getWindowManager().getProjectWindow().getSimulationPane();
@@ -33,6 +41,9 @@ public class Creator extends MouseTool {
 		return pos;
 	}
 	
+	/**
+	 * @return A deep copy of the defaultPlanet, minus some fields like id and position.
+	 */
 	private Planet roughCloneDefaultPlanet() {
 		Planet c = new Planet();
 		c.setDensity(defaultPlanet.getDensity());

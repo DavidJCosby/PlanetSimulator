@@ -12,7 +12,13 @@ import javafx.scene.paint.*;
  * @author David Cosby
  */
 public class PlanetDisplay extends Circle {
+	/**
+	 * (pixels, pixels)
+	 */
 	private Vector position = new Vector();
+	/**
+	 * Identifier unique to the PlanetDisplay.
+	 */
 	private int ID;
 	
 	

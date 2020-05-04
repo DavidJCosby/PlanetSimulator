@@ -9,6 +9,10 @@ import planets.render.renderObjects.PlanetDisplayContainer;
 import vector.Vector;
 
 
+/**
+ * Tests the Renderer and Camera for correctness.
+ * @author David Cosby
+ */
 class RenderTest {
 
 	private void compareVectors(Vector a, Vector b) {

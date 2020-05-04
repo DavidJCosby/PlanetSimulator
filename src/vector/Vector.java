@@ -1,8 +1,8 @@
 package vector;
 
 /**
+ * 2D Vector class.
  * @author David Cosby
- *
  */
 public class Vector {
 	private double x;

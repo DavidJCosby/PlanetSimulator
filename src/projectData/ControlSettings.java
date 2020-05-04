@@ -18,8 +18,11 @@ public class ControlSettings {
 	private void setup() {
 		mouseBindings.put("CameraPan", MouseButton.PRIMARY);
 	}
-
 	
+	/**
+	 * @param eventName what type of mouse event we are looking for.
+	 * @return MouseButton that must be pressed for the event to be recognized.
+	 */
 	public MouseButton getMouseButtonForEvent(String eventName) {
 		return mouseBindings.get(eventName);
 	}

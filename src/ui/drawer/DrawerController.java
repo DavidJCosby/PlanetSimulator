@@ -8,6 +8,10 @@ import bridge.Tools;
 import javafx.scene.input.*;
 import bridge.*;
 
+/**
+ * Processes user input on drawers, updates fields with correct information.
+ * @author David Cosby
+ */
 public class DrawerController {
 
 	private Planet currentPlanet;
@@ -117,6 +121,9 @@ public class DrawerController {
 		});
 	}
 	
+	/**
+	 * @param p Planet that was selected
+	 */
 	public void selectedPlanet(Planet p) {
 		currentPlanet = p;
 		updateOneTimePlanetInformation();
@@ -129,6 +136,9 @@ public class DrawerController {
 		}
 	}
 	
+	/**
+	 * Fire this when we need to set planet selection to null.
+	 */
 	public void deselectedPlanet() {
 		currentPlanet = null;
 		data.setNameTo("");
@@ -153,14 +163,15 @@ public class DrawerController {
 
 	}
 	
+	/**
+	 * @param open whether we are open for changes or not.
+	 */
 	public void setOpenForChanges(boolean open) {
 		if (currentPlanet != null) {
 			data.setOpenForChanges(open);
 			data.setVelocityTo(currentPlanet.getVelocity());
 			data.setPositionTo(currentPlanet.getPosition());
-
 		}
 	}
-
 	
 }

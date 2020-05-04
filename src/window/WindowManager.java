@@ -15,6 +15,9 @@ public class WindowManager {
 		setSkin("gruvbox.css");
 	}
 	
+	/**
+	 * @param stylesName Sets which UI skin needs to be used.
+	 */
 	public void setSkin(String stylesName) {
 		projectWindow.addCSS(stylesPre + stylesName);
 	}
@@ -24,10 +27,15 @@ public class WindowManager {
 		return projectWindow;
 	}
 	
+	/**
+	 * enables visibility for the ProjectWindow.
+	 */
 	public void showProjectWindow() {
 		projectWindow.show();
 	}
-	
+	/**
+	 * disables visibility for the ProjectWindow.
+	 */
 	public void hideProjectWindow() {
 		projectWindow.hide();
 	}

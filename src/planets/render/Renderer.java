@@ -54,17 +54,20 @@ public class Renderer {
 		PlanetContainer planetContainer = projectData.getPlanets();
 		Vector screenCenter = new Vector(simulationPane.getWidth(), simulationPane.getHeight()).mul(0.5);
 		
-		
 		int loopSize = planetContainer.getNumberOfPlanets();
+		
 		for (int i = 0; i < loopSize; i++) {
 			PlanetDisplay planetDisplay = planetDisplayContainer.getPlanetDisplayByIndex(i);
 			planetDisplay.setStrokeWidth(0); // hacky default
+			
 			if (projectData.getSelection() != null) {
 				if (projectData.getSelection().getID() == (planetDisplay.getID())) {
 					selectionFlash(planetDisplay);
 				}
 			}
+			
 			Planet planet = planetContainer.getPlanetByIndex(i);
+			
 			if (planet.getDeleted() == false) {
 				planetDisplay.setPosition(screenCenter.add(camera.getScreenDisplacementFromCenter(planet.getPosition())));
 				planetDisplay.setRadius(camera.getScreenPixelLength(planet.getRadius()));

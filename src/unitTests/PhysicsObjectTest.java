@@ -16,6 +16,10 @@ import planets.PlanetManager;
 import vector.Vector;
 import window.WindowManager;
 
+/**
+ * Test physics objects for correctness.
+ * @author David Cosby
+ */
 class PhysicsObjectTest {
 
 	private void compareVectors(Vector a, Vector b) {

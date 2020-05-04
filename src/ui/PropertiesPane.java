@@ -4,6 +4,10 @@ import javafx.scene.layout.*;
 import ui.drawer.*;
 
 
+/**
+ * Left-side pane in charge of adjusting object properties and simulation settings.
+ * @author David Cosby
+ */
 public class PropertiesPane extends Pane {
 	VBox drawer = new VBox();
 	DataDrawer data = new DataDrawer();

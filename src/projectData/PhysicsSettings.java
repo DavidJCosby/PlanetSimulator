@@ -12,18 +12,20 @@ public class PhysicsSettings {
 	 */
 	private double simulationSpeedScale;
 	/**
-	 * Rate at which object positions and velocities are calculated
+	 * Rate at which object positions and velocities are calculated. Not currently being used due to the way the scheduler works.
 	 */
 	private int refreshRateInHertz;
 	
-	
+	/**
+	 * Like a pause feature, determines whether we should be calculating new planet positions or idling.
+	 */
 	private boolean playing;
 	
 
 	
 	public PhysicsSettings() {
 		simulationSpeedScale = 1.0;
-		refreshRateInHertz = 60;
+		refreshRateInHertz = 60; // don't think this value is actually used.
 		playing = true;
 	}
 	

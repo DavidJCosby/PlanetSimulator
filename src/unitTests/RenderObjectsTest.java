@@ -9,6 +9,10 @@ import org.junit.jupiter.api.Test;
 import planets.render.renderObjects.*;
 import ui.SimulationPane;
 
+/**
+ * Tests renderObjects for correctness.
+ * @author David Cosby
+ */
 class RenderObjectsTest {
 
 	// RenderObject.java

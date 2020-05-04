@@ -4,6 +4,10 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.geometry.*;
 
+/**
+ * Bare-bones drawer
+ * @author David Cosby
+ */
 public class Drawer extends HBox {
 	private Pane content = new Pane();
 	private TitledPane drawer;

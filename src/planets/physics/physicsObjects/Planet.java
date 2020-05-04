@@ -14,10 +14,22 @@ public class Planet extends NewtonianObject {
 	*/
 	private double density = 3.34;
 	
+	/**
+	 * Identifier unique to this planet.
+	 */
 	private int ID;
+	/**
+	 * The name or title for the planet. Planets may share the same name without error.
+	 */
 	private String name;
+	/**
+	 * A record of how many planets have ever been created. Used to generate IDs.
+	 */
 	private static int planetsEverCreated;
 	
+	/**
+	 * Ugly deletion technique. When this is true, the render and physics engine will pass over this planet.
+	 */
 	private boolean deleted = false;
 	
 	public Planet() {

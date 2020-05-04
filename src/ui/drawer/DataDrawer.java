@@ -6,6 +6,10 @@ import javafx.scene.layout.*;
 import vector.Vector;
 
 
+/**
+ * Drawer items allow the user to manipulate planet fields.
+ * @author David Cosby
+ */
 public class DataDrawer extends Drawer {
 	
 	VBox sections = new VBox(10);

@@ -36,9 +36,6 @@ public class NewtonianObject {
 	}
 	
 	
-	/**
-	 * @return position in kilometers
-	*/
 	public Vector getPosition() {
 		return position;
 	}

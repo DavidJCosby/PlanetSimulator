@@ -7,6 +7,10 @@ import vector.Vector;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * Tests Gravity for correctness.
+ * @author David Cosby
+ */
 class PhysicsEngineTest {
 
 	@Test

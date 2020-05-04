@@ -6,6 +6,10 @@ import org.junit.jupiter.api.Test;
 
 import vector.Vector;
 
+/**
+ * Tests vector methods for correctness.
+ * @author David Cosby
+ */
 class VectorTest {
 
 	private void compareVectors(Vector a, Vector b) {

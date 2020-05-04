@@ -1,19 +1,16 @@
 package window;
 
-/**
- * @author David Cosby
- *
- */
-
 import javafx.scene.*;
 import javafx.scene.paint.*;
 import javafx.scene.Scene;
 import javafx.stage.*;
-
-
+/**
+ * Barebones window.
+ * @author David Cosby
+ */
 public class Window extends Stage {
 	private Group contents = new Group();
-	public Scene scene = new Scene(contents, 1280, 720);
+	public Scene scene = new Scene(contents, 1440, 900);
 	
 	
 	public Window() {

@@ -8,10 +8,24 @@ import javafx.scene.control.*;
 import projectData.PhysicsSettings;
 
 
+/**
+ * Bar in charge of modulating the speed of the simulation.
+ * @author David Cosby
+ */
+
 public class Timebar extends BorderPane {
 	HBox buttonGroup = new HBox();
+	/**
+	 * pauses or plays the simulation.
+	 */
 	Button play = new Button("||");
+	/**
+	 * halves the speed of the simulation
+	 */
 	Button slower = new Button("0.5");
+	/**
+	 * doubles the speed of the simulation
+	 */
 	Button faster = new Button("x 2");
 	PhysicsSettings settings = Bridge.getProjectData().getSettings().getPhysicsSettings();
 	

@@ -7,7 +7,7 @@ import ui.SimulationPane;
 
 
 /**
- * In charge of registering planets.
+ * In charge of registering planets. Adds Planet objects to the PlanetContainer, creates PlanetDisplays and adds those to the PlanetDisplayContainer.
  * @author David Cosby
  */
 public class PlanetManager {
@@ -18,7 +18,7 @@ public class PlanetManager {
 	
 	/**
 	 * Takes a Planet object and registers it to the simulation by creating a PlanetDisplay and adding the planet to lists that will be used for physics calculations and rendering.
-	 * @param p
+	 * @param p Planet to be registered.
 	 */
 	public void registerPlanet(Planet p) {
 		Bridge.getProjectData().getPlanets().addPlanet(p);
@@ -27,7 +27,7 @@ public class PlanetManager {
 		Bridge.getRenderer().getSimulationPane().addPlanetDisplay(planetDisplay);
 	}
 	
-	public void removePlanetById(int id) { // this is going to be really ugly, but the alternative was actually worse.
+	public void removePlanetById(int id) { // this is ugly, but the alternative was actually worse.
 		Planet p = Bridge.getProjectData().getPlanets().getPlanetById(id);
 		p.setDeleted(true);
 		SimulationPane simp = Bridge.getRenderer().getSimulationPane();

@@ -7,6 +7,10 @@ import javafx.scene.layout.*;
 import ui.*;
 import javafx.beans.value.*;
 
+/**
+ * Window containing everything related to the simulation project.
+ * @author David Cosby
+ */
 public class ProjectWindow extends Window {
 	private BorderPane borderPane = new BorderPane();
 	private BorderPane centerPane = new BorderPane();
@@ -26,8 +30,6 @@ public class ProjectWindow extends Window {
 	private void setup() {
 		borderPane.setCenter(centerPane);
 		//centerPane.setLeft(propertiesPane);
-		
-		
 		
 		borderPane.setTop(topbar);
 		centerPane.setTop(toolbar);
