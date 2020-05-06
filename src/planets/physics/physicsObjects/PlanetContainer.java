@@ -48,7 +48,6 @@ public class PlanetContainer {
 		return planetsByID.get(ID);
 	}
 	
-	
 	/**
 	 * Removes the planet from the registry. Hopefully java has garbage collection that will clean this up?
 	 * @param ID identifier of the requested planet

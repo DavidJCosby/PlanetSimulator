@@ -48,6 +48,9 @@ public class Planet extends NewtonianObject {
 		establishIdentity();
 	}
 	
+	/**
+	 * assigns the planet a unique identifier and names itself after that number.
+	 */
 	private void establishIdentity() {
 		ID = planetsEverCreated + 1;
 		name = "Planet" + ID;

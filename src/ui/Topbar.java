@@ -18,6 +18,9 @@ public class Topbar extends MenuBar {
 		buildMenus();
 	}
 	
+	/**
+	 * sets up GUI layouts and element properties
+	 */
 	private void buildMenus() {
 		//useSystemMenuBarProperty().set(true);
 		fileMenu.getItems().addAll(save, exit);

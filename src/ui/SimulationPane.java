@@ -22,6 +22,9 @@ public class SimulationPane extends Pane {
 		setup();
 	}
 	
+	/**
+	 * sets up GUI layouts and element properties
+	 */
 	private void setup() {
 		getChildren().add(planetDisplays);
 		setId("bg");
@@ -29,6 +32,9 @@ public class SimulationPane extends Pane {
 		connectMouseEvents();
 	}
 	
+	/**
+	 * creates a region that will clip out any circles that leave the pane boundaries.
+	 */
 	private void setupClip() {
 		setClip(clip);
 		layoutBoundsProperty().addListener((ov, oldValue, newValue) -> {
@@ -37,6 +43,9 @@ public class SimulationPane extends Pane {
 		});
 	}
 	
+	/**
+	 * Sets up mousePressed and mouseReleased events for interaction with mouseTools.
+	 */
 	private void connectMouseEvents() {
 		ProjectData data = Bridge.getProjectData();
 		
@@ -66,6 +75,9 @@ public class SimulationPane extends Pane {
 	}
 	
 	
+	/**
+	 * @param planetDisplay adds a PlanetDisplay to the Pane's children.
+	 */
 	public void addPlanetDisplay(PlanetDisplay planetDisplay) {
 		planetDisplays.getChildren().add(planetDisplay);
 	}

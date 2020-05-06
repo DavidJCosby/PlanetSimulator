@@ -18,6 +18,9 @@ public class Window extends Stage {
 		setupScene();
 	}
 	
+	/**
+	 * establishes the newly created scene as this windows scene.
+	 */
 	private void setupScene() {
 		setScene(scene);
 	}
@@ -30,6 +33,9 @@ public class Window extends Stage {
 		contents = newContents;
 	}
 	
+	/**
+	 * @param cssFileName Name of the stylesheet to be applied
+	 */
 	public void addCSS(String cssFileName) {
 		scene.getStylesheets().add(cssFileName);
 	}

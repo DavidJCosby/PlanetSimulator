@@ -23,11 +23,18 @@ public class DrawerController {
 		
 	}
 	
+	/**
+	 * @param e KeyEvent with KeyCode information
+	 * @return whether the key pressed is an Enter or Tab key. Used to decided whether the move the Focus down and update from the TextField data.
+	 */
 	private boolean isSubmitKey(KeyEvent e) {
 		return (e.getCode() == KeyCode.ENTER) || (e.getCode() == KeyCode.TAB);
 	}
 	
 	
+	/**
+	 * Connects each of the textFields to code that will handle user input
+	 */
 	private void listenForUserInput() {
 		listening = true;
 		
@@ -148,7 +155,9 @@ public class DrawerController {
 		data.setOpenForChanges(false);
 	}
 	
-	
+	/**
+	 * Updates all of the information in the DataDrawer to match the instantaneous properties of a planet.
+	 */
 	private void updateOneTimePlanetInformation() {
 		data = Bridge.getWindowManager().getProjectWindow().getPropertiesPane().getDataDrawer();
 		if (!listening) {
@@ -160,7 +169,6 @@ public class DrawerController {
 		data.setDensityTo(currentPlanet.getDensity());
 		data.setPositionTo(currentPlanet.getPosition());
 		data.setVelocityTo(currentPlanet.getVelocity());
-
 	}
 	
 	/**

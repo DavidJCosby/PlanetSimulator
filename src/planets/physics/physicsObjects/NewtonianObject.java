@@ -64,13 +64,11 @@ public class NewtonianObject {
 		mass = newMass;
 	}
 	
+	/**
+	 * @return momentum vector, equivalent to mass * velocity
+	 */
 	public Vector getMomentum() {
 		return velocity.mul(mass);
 	}
-	
-	public void applyMomentum(Vector MomentumVector) {
-		Vector velocityToAdd = MomentumVector.div(mass);
-		velocity = velocity.add(velocityToAdd);
-	}
-	
+		
 }

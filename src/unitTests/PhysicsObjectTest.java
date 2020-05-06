@@ -75,8 +75,6 @@ class PhysicsObjectTest {
 		p.setVelocity(new Vector(2, -3));
 		compareVectors(new Vector( 120, -180), p.getMomentum());
 		
-		p.applyMomentum(new Vector(-84, 22));
-		compareVectors(new Vector(36, -158), p.getMomentum());
 	}
 	
 	@Test

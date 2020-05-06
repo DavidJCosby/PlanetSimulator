@@ -24,7 +24,6 @@ public class PlanetDisplay extends Circle {
 	
 	public PlanetDisplay(int ID) {
 		this.ID = ID;
-		this.setId("Planet");
 		createSelf();
 		connectMouseEvents();
 	}
@@ -46,12 +45,19 @@ public class PlanetDisplay extends Circle {
 		return ID;
 	}
 	
+	/**
+	 * Sets up the style/ui design of the planetDisplay
+	 */
 	private void createSelf() {
 	//	this.setStroke(Color.web("#ffffff")); // TODO: replace with CSS
 		//this.setFill(Color.web("#859900"));
+		this.setId("Planet");
 		this.toBack();
 	}
 	
+	/**
+	 * clicking on the planet display will select it.s
+	 */
 	private void connectMouseEvents() {
 		setOnMousePressed((event) -> {
 			Planet p = Bridge.getProjectData().getPlanets().getPlanetById(this.ID);
@@ -62,6 +68,9 @@ public class PlanetDisplay extends Circle {
 		});
 	}
 	
+	/**
+	 * updates the circle's CenterX and CenterY to match the position property
+	 */
 	private void updatePosition() {
 		this.setCenterX(position.getX());
 		this.setCenterY(position.getY());

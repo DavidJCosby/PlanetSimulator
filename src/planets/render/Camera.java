@@ -71,7 +71,6 @@ public class Camera {
 		return kilometerLength * pixelsPerKilometer;
 	}
 	
-	
 	/**
 	 * @param pixelDisplacement (pixels, pixels)
 	 * @return kilometerVector - pixelDisplacement cast to kilometer-scale vector using the zoom factor

@@ -134,7 +134,7 @@ public class Vector {
 	
 	/**
 	 * Note: if the magnitude of the vector is zero, returns (0, 0)
-	 * @return new Vector where Vector.magnitude() == 0
+	 * @return new Vector where Vector.magnitude() == 1
 	 */
 	public Vector unit() {
 		double mag = magnitude();

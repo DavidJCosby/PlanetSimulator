@@ -58,6 +58,9 @@ public class Creator extends MouseTool {
 		return c;
 	}
 	
+	/**
+	 * updates the planetPreview so that its position and radius is correct.
+	 */
 	private void updatePlanetDisplay() {
 		Vector screenPos = lastPos;
 		double radius = cam.getScreenPixelLength(defaultPlanet.getRadius());

@@ -24,7 +24,10 @@ public class PlanetPreview extends Circle {
 		updatePosition();
 	}
 	
-	private void updatePosition() {
+	/**
+	 * updates the circle's CenterX and CenterY to match the position property
+	 */
+	private void updatePosition() { 
 		this.setCenterX(position.getX());
 		this.setCenterY(position.getY());
 	}

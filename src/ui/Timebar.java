@@ -27,16 +27,20 @@ public class Timebar extends BorderPane {
 	 * doubles the speed of the simulation
 	 */
 	Button faster = new Button("x 2");
+	
 	PhysicsSettings settings = Bridge.getProjectData().getSettings().getPhysicsSettings();
 	
 	
 	public Timebar() {
-		setId("timebar");		
 		build();
 		connectButtons();
 	}
 	
+	/**
+	 * sets up GUI layouts and element properties
+	 */
 	private void build() {
+		setId("timebar");		
 		setPrefHeight(73);
 		setCenter(buttonGroup);
 		buttonGroup.setMaxWidth(170);
@@ -48,6 +52,9 @@ public class Timebar extends BorderPane {
 		buttonGroup.getChildren().addAll(slower, play, faster);
 	}
 	
+	/**
+	 * Creates lambdas for the slower, faster, and play buttons, allowing the user to manipulate time.
+	 */
 	private void connectButtons() {
 		slower.setOnAction((event) -> {
 			settings.setSimulationSpeedScale(settings.getSimulationSpeedScale() * 0.5);

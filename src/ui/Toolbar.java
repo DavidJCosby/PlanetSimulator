@@ -21,6 +21,9 @@ public class Toolbar extends ToolBar {
 		setupUserInput();
 	}
 	
+	/**
+	 * sets up GUI layouts and element properties
+	 */
 	private void build() {
 		pan.setSelected(true);
 		pan.setFocusTraversable(false);
@@ -34,6 +37,9 @@ public class Toolbar extends ToolBar {
 		
 	}
 	
+	/**
+	 * Listens for button input to equip and unequip MouseTools
+	 */
 	private void setupUserInput() {
 		pan.setOnAction((e) -> {
 			Bridge.getProjectData().getCurrentTool().onUnequip();

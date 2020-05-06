@@ -17,10 +17,16 @@ public class Drawer extends HBox {
 		build();
 	}
 	
+	/**
+	 * @param title Title applied to th TitledPane that forms the drawer.
+	 */
 	private void createDrawer(String title) {
 		drawer = new TitledPane(title, content);
 	}
 	
+	/**
+	 * sets up GUI layouts and element properties
+	 */
 	private void build() {
 		HBox.setHgrow(drawer, Priority.ALWAYS);
 		setPadding(new Insets(4, 4, 4, 4));
@@ -34,6 +40,9 @@ public class Drawer extends HBox {
 		return content;
 	}
 	
+	/**
+	 * @param expandedState boolean indicating whether the drawer should be expanded or not.
+	 */
 	public void setExpanded(boolean expandedState) {
 		drawer.setExpanded(expandedState);
 	}

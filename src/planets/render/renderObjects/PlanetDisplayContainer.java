@@ -17,6 +17,9 @@ public class PlanetDisplayContainer {
 		
 	}
 	
+	/**
+	 * @param planetDisplay planetDisplay to be registered to the DisplayContainer
+	 */
 	public void addPlanetDisplay(PlanetDisplay planetDisplay) {
 		planetDisplays.add(planetDisplay);
 		planetDisplaysByID.put(planetDisplay.getID(), planetDisplay);

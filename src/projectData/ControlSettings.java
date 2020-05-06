@@ -15,6 +15,9 @@ public class ControlSettings {
 		setup();
 	}
 	
+	/**
+	 * Establishes default keybindings.
+	 */
 	private void setup() {
 		mouseBindings.put("CameraPan", MouseButton.PRIMARY);
 	}

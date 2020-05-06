@@ -28,16 +28,23 @@ public class PhysicsEngine {
 	}
 	
 	
+	/**
+	 * Uses the planet's velocity to reposition the planet.
+	 * @param p planet whose position needs updating
+	 * @param deltaSeconds how long it has been since the last update
+	 */
 	private void updatePosition(Planet p, double deltaSeconds) {
 		Vector deltaP = p.getVelocity().mul(deltaSeconds);
 		p.setPosition(p.getPosition().add(deltaP));
 	}
 	
 	
+	/**
+	 * Fire this to recalculate the positions and velocities of each planet.
+	 */
 	public void calculate() {
 		
 		if (settings.getPlaying() == true) {
-			
 			PlanetContainer planets = Bridge.getProjectData().getPlanets();
 			int numPlanets = planets.getNumberOfPlanets();
 			double deltaSeconds = getDeltaSeconds();
@@ -47,8 +54,8 @@ public class PhysicsEngine {
 				if (p.getDeleted() == true) {
 					continue;
 				}
-				updatePosition(p, deltaSeconds);
 				
+				updatePosition(p, deltaSeconds);
 				for (int i2 = 0; i2 < numPlanets; i2++) {
 					Planet p2 = planets.getPlanetByIndex(i2);
 					if (p.getID() != p2.getID()) {

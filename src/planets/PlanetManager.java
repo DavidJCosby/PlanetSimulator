@@ -27,6 +27,10 @@ public class PlanetManager {
 		Bridge.getRenderer().getSimulationPane().addPlanetDisplay(planetDisplay);
 	}
 	
+	/**
+	 * Marks the planet with this id as deleted, so that the render and physics engines will skip over it, and makes the PlanetDisplay invisible.
+	 * @param id identifier of the planet to be removed
+	 */
 	public void removePlanetById(int id) { // this is ugly, but the alternative was actually worse.
 		Planet p = Bridge.getProjectData().getPlanets().getPlanetById(id);
 		p.setDeleted(true);

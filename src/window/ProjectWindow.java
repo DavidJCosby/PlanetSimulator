@@ -27,6 +27,9 @@ public class ProjectWindow extends Window {
 		setup();
 	}
 	
+	/**
+	 * sets up GUI layouts and element properties
+	 */
 	private void setup() {
 		borderPane.setCenter(centerPane);
 		//centerPane.setLeft(propertiesPane);
@@ -56,7 +59,6 @@ public class ProjectWindow extends Window {
 		    }
 
 		});
-
 
 	}
 	

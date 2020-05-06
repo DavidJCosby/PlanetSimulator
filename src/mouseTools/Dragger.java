@@ -39,6 +39,10 @@ public class Dragger extends MouseTool {
 		return m.getButton().equals(panButton);
 	}
 	
+	/**
+	 * Updates a variable to keep track of where the mouse has been.
+	 * @param e MouseEvent with positional information.
+	 */
 	private void updateLastPosWithEventInfo(MouseEvent e) {
 		lastPos = new Vector(e.getX(), e.getY());
 	}
@@ -110,7 +114,10 @@ public class Dragger extends MouseTool {
 		
 	}
 	
-	
+	/**
+	 * @param deltaRatio how much the zoom will be changing
+	 * @param zoomCenter coordinates that the camera will be zooming in on.
+	 */
 	private void zoom(double deltaRatio, Vector zoomCenter) {
 		zoomCenter = camera.getVectorDisplacementFromPixelDisplacement(zoomCenter);
 		Vector screenCenter = getScreenCenter();

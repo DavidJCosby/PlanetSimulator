@@ -16,7 +16,7 @@ public class WindowManager {
 	}
 	
 	/**
-	 * @param stylesName Sets which UI skin needs to be used.
+	 * @param stylesName cssFileName Name of the stylesheet to be applied
 	 */
 	public void setSkin(String stylesName) {
 		projectWindow.addCSS(stylesPre + stylesName);

@@ -20,6 +20,9 @@ public class PropertiesPane extends Pane {
 		build();
 	}
 	
+	/**
+	 * sets up GUI layouts and element properties
+	 */
 	private void build() {
 		setId("properties");
 		setMaxWidth(420);

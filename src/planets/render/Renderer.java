@@ -41,13 +41,19 @@ public class Renderer {
 		return planetPreview;
 	}
 	
+	/**
+	 * Animates the red outline on the PlanetDisplay, indicating that it is selected.
+	 * @param planetDisplay PlanetDisplay that needs to flash
+	 */
 	private void selectionFlash(PlanetDisplay planetDisplay) {
 		double now = (double)System.currentTimeMillis();
 		double multiplier = Math.sin(now / 200) / 2 + 1.5;
 		planetDisplay.setStrokeWidth(multiplier * 4);
 	}
 	
-	
+	/**
+	 * Run this to update the positions and radii of PlanetDisplays.
+	 */
 	public void render() {
 		ProjectData projectData = Bridge.getProjectData();
 		Camera camera = projectData.getCamera();

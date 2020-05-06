@@ -65,8 +65,10 @@ public class DataDrawer extends Drawer {
 		build();
 	}
 	
+	/**
+	 * sets up GUI layouts and element properties
+	 */
 	private void build() {
-		
 		name.setPrefWidth(150);
 		nameSection.getStyleClass().add("section");
 		nameSection.getChildren().addAll(nameLabel, name);
@@ -107,32 +109,46 @@ public class DataDrawer extends Drawer {
 	}
 	
 	
+	/**
+	 * @param newName text that the Name field will be updated to
+	 */
 	public void setNameTo(String newName) {
 		name.setText(newName);
 	}
-	
+	/**
+	 * @param newMass double that the Mass field will be updated to
+	 */
 	public void setMassTo(double newMass) {
 		mass.setText(newMass + "");
 	}
 	
+	/**
+	 * @param newRadius double that the Radius field will be updated to
+	 */
 	public void setRadiusTo(double newRadius) {
 		radius.setText(newRadius + "");
 	}
 	
+	/**
+	 * @param newDensity double that the Density field will be updated to
+	 */
 	public void setDensityTo(double newDensity) {
 		density.setText(newDensity + "");
 	}
 	
+	/**
+	 * @param newPosition vector that the X and Y fields will mirror
+	 */
 	public void setPositionTo(Vector newPosition) {
 		if (x.isEditable()) {
-		double xPos = newPosition.getX();
-		double yPos = newPosition.getY();
-		double accuracy = 1e2;
-		xPos = Math.round(xPos * accuracy) / accuracy;
-		yPos = Math.round(yPos * accuracy) / accuracy;
-
-		x.setText(xPos + "");
-		y.setText(yPos + "");
+			double xPos = newPosition.getX();
+			double yPos = newPosition.getY();
+			double accuracy = 1e2;
+			xPos = Math.round(xPos * accuracy) / accuracy;
+			yPos = Math.round(yPos * accuracy) / accuracy;
+	
+			x.setText(xPos + "");
+			y.setText(yPos + "");
 		}
 		else {
 			x.setText("---------------");
@@ -140,6 +156,9 @@ public class DataDrawer extends Drawer {
 		}
 	}
 	
+	/**
+	 * @param newVelocity vector that the VX and VY fields will mirror
+	 */
 	public void setVelocityTo(Vector newVelocity) {
 		if (vx.isEditable()) {
 			double xVel = newVelocity.getX();
@@ -157,6 +176,10 @@ public class DataDrawer extends Drawer {
 		}
 	}
 	
+	/**
+	 * Will set the editability of the TextFields.
+	 * @param open
+	 */
 	public void setOpenForChanges(boolean open) {
 		name.setEditable(open);
 		mass.setEditable(open);

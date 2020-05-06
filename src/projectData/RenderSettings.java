@@ -6,10 +6,8 @@ package projectData;
  */
 public class RenderSettings {
 
-	
 	public RenderSettings() {
 		
 	}
 
-	
 }
