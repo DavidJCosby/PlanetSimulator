@@ -19,7 +19,8 @@ Make sure that you have a jdk before running. (I used jdk1.8.0_211)
 * Go to src/(default package)/test.java in the Project Explorer
 * Right Click > Run As > Java Application
 
-[Application Screenshot](screenshot.PNG)
+![Application Screenshot](screenshot.PNG "Screenshot")
+
 If you run the program from Eclipse and the UI doesn't match the screenshot above, please do the following to bring the custom stylesheet in:
  * Through eclipse, go to the src/styles folder
  * double click gruvbox.css and instruct Eclipse to open the file in an external editor
