@@ -9,7 +9,7 @@ I had a couple of motivations pushing me through this project. I had actually ma
 I also wanted practice with some new Software Architecture principles that I learned earlier this year. I won't go too deep into the specifics, but one of my primary goals of this project was to write code that scales up easily.
 
 ## How to Run
-If you're just looking to hop right in without looking at the source code, run the executable PlanetGame.jar
+If you're just looking to hop right in without looking at the source code, run the executable PlanetSimulator.jar from the [releases](https://github.com/DavidJCosby/PlanetSimulator/releases) tab.
 Make sure that you have a jdk before running. (I used jdk1.8.0_211)
 
 ### Running in Eclipse
