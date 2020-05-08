@@ -26,7 +26,3 @@ hs_err_pid*
 # Mac garbo #
 *.DS_Store
 /bin/
-
-
-# JavaDocs #
-/doc/*
