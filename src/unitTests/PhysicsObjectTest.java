@@ -107,9 +107,13 @@ class PhysicsObjectTest {
 	void testPlanetContainer() {
 		PlanetContainer c = new PlanetContainer();
 		Planet p = new Planet();
+		Planet p2 = new Planet();
 		c.addPlanet(p);
+		c.addPlanet(p2);
 		assertSame(c.getPlanetByIndex(0), c.getPlanetById(p.getID()));
-		assertEquals(1, c.getNumberOfPlanets());
+		assertEquals(2, c.getNumberOfPlanets());
+		c.removePlanetById(p2.getID());
+		assertEquals(true, p2.getDeleted());
 	}
 	
 	@Test
@@ -117,21 +121,27 @@ class PhysicsObjectTest {
 		// just run some setup code to see if it works, only way I can think of to test it.
 		ProjectData data = new ProjectData();
 		Bridge.setProjectData(data);
+		assertEquals(data, Bridge.getProjectData());
 		
 		Renderer renderer = new Renderer();
 		Bridge.setRenderer(renderer);
-
+		assertEquals(renderer, Bridge.getRenderer());
+		
 		Scheduler scheduler = new Scheduler();
 		Bridge.setScheduler(scheduler);
+		assertEquals(scheduler, Bridge.getScheduler());
 		
 		PhysicsEngine physicsEngine = new PhysicsEngine();
 		Bridge.setPhysicsEngine(physicsEngine);
-		
+		assertEquals(physicsEngine, Bridge.getPhysicsEngine());
+
 		PlanetManager planetManager = new PlanetManager();
 		Bridge.setPlanetManager(planetManager);
-		
+		assertEquals(planetManager, Bridge.getPlanetManager());
+
 		Bridge.getProjectData().setCurrentTool(Tools.DRAG);
 		
-		// no way to test the PlanetManager.
+		// no way to test the WindowManager, and by extension, the method inside of PlanetManager.
+		// also no safe way to test scheduler functionality.
 	}
 }

@@ -72,5 +72,8 @@ class RenderTest {
 		Renderer renderer = new Renderer();
 		assertTrue(renderer.getPlanetDisplayContainer() instanceof PlanetDisplayContainer);
 	}
+	
+	// much the renderer cannot be tested because it relies on timing that cannot be created in this test environment.
+
 
 }

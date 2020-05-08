@@ -57,6 +57,7 @@ public class PlanetContainer {
 		
 		for (Planet p : planets) {
 			if (p.getID() == ID ) {
+				p.setDeleted(true);
 				break;
 			}
 			counter++;

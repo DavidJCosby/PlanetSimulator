@@ -27,6 +27,10 @@ class PhysicsEngineTest {
 		Gravity.gravitateATowardsB(human, earth, 1);
 		// a human should fall 9.81^2 meters in 2 seconds on earth
 		assertEquals(earth.getRadius() - (acceleration / 1000), human.getPosition().getX(), 0.01);
+		
+		// cannot test calculate() and its dependent methods because they check how much time has passes since the last update.
+		// This will not work in a test environment.
+		
 	}
 
 }

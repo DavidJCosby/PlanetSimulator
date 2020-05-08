@@ -64,6 +64,7 @@ class RenderObjectsTest {
 		assertSame(obj1, cont.getPlanetDisplayByIndex(0));
 		assertSame(obj2, cont.getPlanetDisplayByID(9));
 	}
+
 	
 	// SimulationPane.java
 	@Test
