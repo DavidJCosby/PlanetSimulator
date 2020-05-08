@@ -93,6 +93,7 @@ public class test extends Application {
 	}
 	
 	public static void main(String[] args) {
+        //System.setProperty("prism.dirtyopts", "true");  // this may need to be toggled if you are experiencing the "white box" rendering artifact.
 		launch(args);
 	}
 }
