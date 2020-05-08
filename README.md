@@ -16,13 +16,13 @@ Make sure that you have a jdk before running. (I used jdk1.8.0_211)
 * Open Eclipse
 * Go to File > Open Projects From File System
 * Open this directory
-* Go to src/(default package)/test.java in the Project Explorer
+* Go to _src/(default package)/test.java_ in the Project Explorer
 * Right Click > Run As > Java Application
 
 ![Application Screenshot](screenshot.PNG "Screenshot")
 
 If you run the program from Eclipse and the UI doesn't match the screenshot above, please do the following to bring the custom stylesheet in:
- * Through eclipse, go to the src/styles folder
+ * Through eclipse, go to the _src/styles_ folder
  * double click gruvbox.css and instruct Eclipse to open the file in an external editor
  * doing this should make Eclipse realize this file exists. Try running the program again.
 
@@ -68,12 +68,13 @@ public void onScroll(ScrollEvent e) {
 	Vector mousePosition = new Vector(e.getX(), e.getY());
 
 	zoom(zoomFactor, mousePosition);
-	}
+}
+
 ```
 Whenever the user mouses their mouse over the simulation, that user Input is routed to the current MouseTool via `currentTool.onMouseMove()`. When the user changes tools, the old MouseTool receives `onUnequip()` and the new one gets `onEquip()`. Each of the MouseTools do completely different things, but the abstract class unites its similarities and simplifies the interaction. I liked this code a lot because its an excellent usage of polymorphism.
 
 ## Tests
-I implemented some Unit tests via JUnit4. If you would like to run them or expand on them, they can be found in src/UnitTests
+I implemented some Unit tests via JUnit4. If you would like to run them or expand on them, they can be found in _src/UnitTests_
 
 If you are using Eclipse, you can right click > Run As > JUnit Test
 to run each test in the folder.
